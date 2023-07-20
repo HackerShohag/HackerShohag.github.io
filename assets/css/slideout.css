@@ -1,0 +1,52 @@
+:root {
+    --current-z-index: 0;
+    --highest-z-index: 45;
+}
+
+.leftSlideAnimation {
+    animation:
+        slideFromLeft 0.5s 1,
+        stackOutAnimation 0.25s step-end;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.rightSlideAnimation {
+    animation:
+        slideFromRight 0.5s 1,
+        stackOutAnimation 0.25s step-end;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes stackOutAnimation {
+    0% {
+        z-index: var(--current-z-index);
+    }
+
+    50% {
+        z-index: var(--current-z-index);
+    }
+
+    100% {
+        z-index: var(--highest-z-index);
+    }
+}
+
+@keyframes slideFromLeft {
+    50% {
+        left: -200%;
+    }
+}
+
+@keyframes slideFromRight {
+    50% {
+        left: 200%;
+    }
+}
