@@ -1,7 +1,3 @@
-/*
-  IR_Black style (c) Vasily Mikhailitchenko <vaskas@programica.ru>
-*/
-
 .hljs {
   display: block;
   overflow-x: auto;
@@ -61,7 +57,7 @@
 
 .hljs-number,
 .hljs-deletion {
-  color:#ff73fd;
+  color: #ff73fd;
 }
 
 .hljs-emphasis {
