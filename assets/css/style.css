@@ -42,16 +42,17 @@ article {
 }
 
 :root {
+  --bg-body: linear-gradient(to left, #ff359b, #d6d30a, #f03c69, #3cf0c9);
   --bg-gradient-onyx: linear-gradient(to bottom right, hsl(240, 66%, 71%) 3%, hsl(0, 38%, 52%) 97%);
-  --bg-gradient-jet: linear-gradient(to bottom right, hsla(240, 25%, 37%, 0.251) 0%, hsla(240, 53%, 70%, 0) 100%), hsl(240, 2%, 13%);
+  --bg-gradient-jet: linear-gradient(to bottom right, hsla(240, 25%, 37%, 0.251) 0%, hsla(240, 53%, 70%, 0) 100%), hsla(240, 3%, 13%, 0.15);
   --bg-gradient-yellow-1: linear-gradient(to bottom right, hsl(45, 100%, 71%) 0%, hsla(35, 41%, 65%, 0) 50%);
   --bg-gradient-yellow-2: linear-gradient(135deg, hsla(45, 100%, 71%, 0.251) 0%, hsla(34, 24%, 50%, 0) 59.86%), hsl(240, 2%, 13%);
-  --border-gradient-onyx: linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 21%, 37%, 0) 50%);
+  --border-gradient-onyx: linear-gradient(to bottom right, hsla(313, 84%, 63%, 0.2) 0%, hsla(0, 21%, 37%, 0) 50%);
   --text-gradient-yellow: linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%));
   --jet: hsl(0, 48%, 81%);
   --onyx: hsl(240, 25%, 71%);
-  --eerie-black-1: hsl(240, 2%, 13%);
-  --eerie-black-2: hsl(240, 2%, 12%);
+  --eerie-black-1: hsla(240, 3%, 13%, 0.2);
+  --eerie-black-2: rgba(0, 0, 0, 0.2);
   --smoky-black: hsl(0, 19%, 68%);
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
@@ -79,7 +80,8 @@ article {
   --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
   --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
   --transition-1: 0.25s ease;
-  --transition-2: 0.5s ease-in-out
+  --transition-2: 0.5s ease-in-out;
+  --navbar-z-index: 0;
 }
 
 *,
@@ -91,11 +93,12 @@ article {
 }
 
 body {
-  background: linear-gradient(-45deg, #f7b5b5, #6cfaff, #a960ee, #ff6c85);
-  background-size: 400% 400%;
+  font-family: "Roboto", sans-serif;
+  /* background: var(--bg-body); */
+  background-size: 100% 100%;
   width: 100%;
   height: 100vh;
-  background: var(--smoky-black)
+  /* animation: colorAnimation 10s ease infinite; */
 }
 
 a {
@@ -255,22 +258,7 @@ article.active {
 }
 
 .has-scrollbar::-webkit-scrollbar {
-  width: 5px;
-  height: 5px
-}
-
-.has-scrollbar::-webkit-scrollbar-track {
-  background: var(--onyx);
-  border-radius: 5px
-}
-
-.has-scrollbar::-webkit-scrollbar-thumb {
-  background: var(--orange-yellow-crayola);
-  border-radius: 5px
-}
-
-.has-scrollbar::-webkit-scrollbar-button {
-  width: 20px
+  display: none;
 }
 
 .content-card {
@@ -456,7 +444,7 @@ main {
   backdrop-filter: blur(10px);
   border: 1px solid var(--jet);
   border-radius: 12px 12px 0 0;
-  z-index: 5
+  z-index: var(--navbar-z-index)
 }
 
 .navbar-list {
@@ -613,7 +601,7 @@ main {
 }
 
 .modal-container::-webkit-scrollbar {
-  display: none
+  display: none;
 }
 
 .overlay {
@@ -1208,7 +1196,8 @@ textarea.form-input::-webkit-resizer {
 
   .avatar-box img {
     border-radius: inherit;
-    width: inherit
+    max-width: 150px;
+    width: inherit;
   }
 
   .info-content .name {
@@ -1427,7 +1416,7 @@ textarea.form-input::-webkit-resizer {
   }
 
   .has-scrollbar::-webkit-scrollbar-button {
-    width: 100px
+    display: none;
   }
 
   .contacts-list {
@@ -1553,26 +1542,7 @@ textarea.form-input::-webkit-resizer {
 
 @media (min-width:1250px) {
   body::-webkit-scrollbar {
-    width: 20px
-  }
-
-  body::-webkit-scrollbar-track {
-    background: var(--smoky-black)
-  }
-
-  body::-webkit-scrollbar-thumb {
-    border: 5px solid var(--smoky-black);
-    background: hsla(0, 0%, 100%, .1);
-    border-radius: 20px;
-    box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, .11), inset -1px -1px 0 hsla(0, 0%, 100%, .11)
-  }
-
-  body::-webkit-scrollbar-thumb:hover {
-    background: hsla(0, 0%, 100%, .15)
-  }
-
-  body::-webkit-scrollbar-button {
-    height: 60px
+    display: none;
   }
 
   .sidebar,
@@ -1662,19 +1632,5 @@ textarea.form-input::-webkit-resizer {
 
   .timeline-text {
     max-width: 700px
-  }
-}
-
-@keyframes colorAnimation {
-  0% {
-    background-position: 0 50%
-  }
-
-  50% {
-    background-position: 50% 100%
-  }
-
-  100% {
-    background-position: 0
   }
 }

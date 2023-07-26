@@ -1,6 +1,6 @@
 :root {
     --current-z-index: 0;
-    --highest-z-index: 45;
+    --highest-z-index: 20;
 }
 
 .leftSlideAnimation {

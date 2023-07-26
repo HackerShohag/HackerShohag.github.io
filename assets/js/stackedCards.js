@@ -78,7 +78,7 @@
                         document.documentElement.style.setProperty('--current-z-index', (parseInt(el.style.zIndex) + 2));
                     }
 
-                    document.documentElement.style.setProperty('--highest-z-index', els.length * 5);
+                    document.documentElement.style.setProperty('--navbar-z-index', els.length * 2 + 6);
                     el.classList.add("stackAnimation");
 
                     el.style.transform = activeTransform;
@@ -86,7 +86,7 @@
                         me.config.onClick(el)
                     }
 
-                    console.log("Next Count: " + nextCnt + " Prev Count: " + prevCnt)
+                    console.log("Current zIndex: " + els[index].style.zIndex + " Next zIndex: " + els[index + 1].style.zIndex + " Prev zIndex: " + els[index - 1].style.zIndex)
 
                     prevIndex = index;
                 })

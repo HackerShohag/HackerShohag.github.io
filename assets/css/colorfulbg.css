@@ -1,0 +1,131 @@
+:root {
+    --item1-color: #ff85c2;
+    --item2-color: #fffebe;
+    --item3-color: #9bf0ff;
+    --item4-color: #ffb184e3;
+    --item5-color: #80ffeae3;
+    --item6-color: #faffb2e3;
+    --bubble-color: #ffffff28;
+}
+
+customSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #eee7e9, #f0dee3);
+}
+
+customSection .bubble {
+    position: absolute;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+customSection .bubble:nth-child(1) {
+    top: -50px;
+    right: -60px;
+    width: 200px;
+    height: 200px;
+}
+
+customSection .bubble:nth-child(2) {
+    top: -50px;
+    right: -60px;
+    width: 200px;
+    height: 200px;
+}
+
+customSection .color {
+    position: fixed;
+    filter: blur(150px);
+}
+
+customSection .color:nth-child(1) {
+    top: -30%;
+    width: 80%;
+    height: 70%;
+    background: var(--item1-color);
+}
+
+customSection .color:nth-child(2) {
+    bottom: -20%;
+    left: 10%;
+    width: 50%;
+    height: 70%;
+    background: var(--item2-color);
+}
+
+customSection .color:nth-child(3) {
+    bottom: 10%;
+    right: 10%;
+    width: 60%;
+    height: 50%;
+    background: var(--item3-color);
+}
+
+customSection .color:nth-child(4) {
+    top: 10%;
+    left: 10%;
+    width: 30%;
+    height: 40%;
+    background: var(--item4-color);
+}
+
+customSection .color:nth-child(5) {
+    top: 10%;
+    width: 20%;
+    height: 20%;
+    background: var(--item1-color);
+    animation: n1thMovingAnimation 10s ease infinite;
+}
+
+customSection .color:nth-child(6) {
+    bottom: 10%;
+    left: 10%;
+    width: 20%;
+    height: 20%;
+    background: var(--item2-color);
+    animation: n2thMovingAnimation 10s ease infinite;
+}
+
+customSection .color:nth-child(7) {
+    bottom: 10%;
+    right: 10%;
+    width: 20%;
+    height: 20%;
+    background: var(--item3-color);
+    animation: n3thMovingAnimation 10s ease infinite;
+}
+
+customSection .color:nth-child(7) {
+    bottom: 10%;
+    right: 10%;
+    width: 20%;
+    height: 20%;
+    background: var(--item3-color);
+    animation: n3thMovingAnimation 10s ease infinite;
+}
+
+@keyframes n1thMovingAnimation {
+    50% {
+        top: 50%;
+    }
+}
+
+@keyframes n2thMovingAnimation {
+    50% {
+        bottom: 100%;
+    }
+}
+
+@keyframes n3thMovingAnimation {
+    50% {
+        bottom: 70%;
+    }
+}

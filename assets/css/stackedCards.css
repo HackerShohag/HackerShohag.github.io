@@ -75,10 +75,12 @@
     border-radius: 10%;
     box-shadow: 0 3px 6px 0px #333;
     list-style: none;
-    width: 20%;
     position: absolute;
     left: 5%;
     transition: 1s ease transform;
+    height: 300px;
+    width: 300px;
+
 }
 
 .stacked-cards li:after {
@@ -98,7 +100,8 @@
     position: relative;
     display: block;
     max-width: 100%;
-    height: auto;
+    width: inherit;
+    height: inherit;
     margin-bottom: 40px;
     object-fit: fill;
     opacity: 40;
@@ -108,19 +111,17 @@
     cursor: default;
     box-shadow: 0 5px 10px 0px #333;
     transition: 0.5s ease transform;
-    z-index: 45;
+    z-index: var(--highest-z-index);
 }
 
-.stacked-cards li {
-    height: 300px;
-    width: 300px;
-}
+/* @media (max-width: 767px) {
 
-@media (max-width: 767px) {
-    .stacked-cards li {
+    .stacked-cards li,
+    .stacked-cards li img {
+        width: 180px;
         height: 180px;
     }
-}
+} */
 
 .stacked-cards li {
     background-color: #00bcd4;
