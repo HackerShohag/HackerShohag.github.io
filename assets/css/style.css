@@ -502,8 +502,7 @@ main {
   margin-bottom: 20px
 }
 
-.blog-posts-list,
-.service-list {
+.blog-posts-list {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px
@@ -1516,11 +1515,6 @@ textarea.form-input::-webkit-resizer {
   .navbar-link {
     font-weight: var(--fw-500);
     z-index: 120
-  }
-
-  .service-list {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px 25px
   }
 
   .testimonials-item {
