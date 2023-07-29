@@ -556,18 +556,9 @@ main {
 }
 
 .testimonials-item {
+  padding-top: 5%;
   min-width: 100%;
   scroll-snap-align: center
-}
-
-.testimonials-avatar-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(15px, -25px);
-  background: var(--bg-gradient-onyx);
-  border-radius: 14px;
-  box-shadow: var(--shadow-1)
 }
 
 .modal-container,
@@ -1282,15 +1273,6 @@ textarea.form-input::-webkit-resizer {
 
   .content-card {
     padding: 25px 30px 30px
-  }
-
-  .testimonials-avatar-box {
-    transform: translate(30px, -30px);
-    border-radius: 20px
-  }
-
-  .testimonials-avatar-box img {
-    width: 80px
   }
 
   .testimonials-item-title {

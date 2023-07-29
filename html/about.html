@@ -1,3 +1,22 @@
+<!-- 
+    vanilla-tilt
+    -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const tiltElement = document.querySelector('.c-logo');
+        VanillaTilt.init(tiltElement, {
+            max: 25,
+            speed: 10,
+            glare: true,
+            'max-glare': 0.4,
+        });
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+
+
 <header>
     <h2 class="h2 article-title">About me</h2>
 </header>
@@ -187,15 +206,46 @@ testimonials
     <ul class="testimonials-list has-scrollbar">
 
         <li class="testimonials-item">
-            <div class="content-card" data-testimonials-item>
 
-                <figure class="testimonials-avatar-box">
-                    <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
+            <div class="flex-container">
+                <div data-tilt data-tilt-glare="true" data-tilt-transition="true" data-tilt-scale="1.1" class="c-logo"
+                    title="Daniel lewis ">
+                    <div class="avatar">
+                        <figure>
+                            <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60"
+                                data-testimonials-avatar>
+                        </figure>
+                        <h4>Daniel lewis</h4>
+                    </div>
+                    <p>
+                        Richard was hired to create a corporate identity. We were very pleased with the work done. She
+                        has a
+                        lot of experience
+                        and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                        consectetur adipiscing
+                        elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
+                    </p>
+                </div>
 
-                <div class="testimonials-text" data-testimonials-text>
+            </div>
+
+        </li>
+
+        <li class="testimonials-item">
+            <div class="flex-container">
+                <div data-tilt data-tilt-glare="true" data-tilt-transition="true" data-tilt-scale="1.1" class="c-logo"
+                    title="Jessica miller">
+                    <div class="avatar">
+
+                        <figure>
+                            <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60"
+                                data-testimonials-avatar>
+                        </figure>
+
+                        <h4>Jessica miller</h4>
+
+                    </div>
                     <p>
                         Richard was hired to create a corporate identity. We were very pleased with the work done. She
                         has a
@@ -210,20 +260,26 @@ testimonials
         </li>
 
         <li class="testimonials-item">
-            <div class="content-card" data-testimonials-item>
+            <div class="flex-container">
+                <div data-tilt data-tilt-glare="true" data-tilt-transition="true" data-tilt-scale="1.1" class="c-logo"
+                    title="Emily evans">
+                    <div class="avatar">
 
-                <figure class="testimonials-avatar-box">
-                    <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
-                </figure>
+                        <figure>
+                            <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60"
+                                data-testimonials-avatar>
+                        </figure>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
+                        <h4>Emily evans</h4>
+                    </div>
 
-                <div class="testimonials-text" data-testimonials-text>
                     <p>
-                        Richard was hired to create a corporate identity. We were very pleased with the work done. She
+                        Richard was hired to create a corporate identity. We were very pleased with the work done.
+                        She
                         has a
                         lot of experience
-                        and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                        and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous
+                        cididt
                         consectetur adipiscing
                         elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
                     </p>
@@ -233,15 +289,18 @@ testimonials
         </li>
 
         <li class="testimonials-item">
-            <div class="content-card" data-testimonials-item>
+            <div class="flex-container">
+                <div data-tilt data-tilt-glare="true" data-tilt-transition="true" data-tilt-scale="1.1" class="c-logo"
+                    title="Henry william">
+                    <div class="avatar">
 
-                <figure class="testimonials-avatar-box">
-                    <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
-                </figure>
+                        <figure>
+                            <img src="./assets/images/avatar-4.png" alt="Henry william" width="60"
+                                data-testimonials-avatar>
+                        </figure>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
+                        <h4>Henry william</h4>
+                    </div>
                     <p>
                         Richard was hired to create a corporate identity. We were very pleased with the work done. She
                         has a
@@ -251,81 +310,11 @@ testimonials
                         elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
                     </p>
                 </div>
-
             </div>
         </li>
-
-        <li class="testimonials-item">
-            <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                    <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                    <p>
-                        Richard was hired to create a corporate identity. We were very pleased with the work done. She
-                        has a
-                        lot of experience
-                        and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                        consectetur adipiscing
-                        elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                    </p>
-                </div>
-
-            </div>
-        </li>
-
     </ul>
 
 </section>
-
-
-<!-- 
-testimonials model
- -->
-
-<div class="modal-container" data-modal-container>
-
-    <div class="overlay" data-overlay></div>
-
-    <section class="testimonials-modal">
-
-        <button class="modal-close-btn" data-modal-close-btn>
-            <ion-icon name="close-outline"></ion-icon>
-        </button>
-
-        <div class="modal-img-wrapper">
-            <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-            </figure>
-
-            <img src="./assets/images/icon-quote.svg" alt="quote icon">
-        </div>
-
-        <div class="modal-content">
-
-            <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-            <time datetime="2021-06-14">14 June, 2021</time>
-
-            <div data-modal-text>
-                <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-</div>
 
 
 <!-- 

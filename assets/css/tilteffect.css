@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.flex-container,
+.c-logo {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+}
+
+.c-logo {
+  width: 75%;
+  height: 100%;
+  background-color: #f3f0fa34;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border-radius: 5%;
+  font-size: 1em;
+  font-weight: 300;
+  transform-style: preserve-3d;
+  transform: perspective(500px);
+  box-shadow: 0 10px 10px -10px rgba(170, 170, 170, 0.205), 0 50px 100px 0 rgba(175, 175, 175, 0.2);
+}
+
+.c-logo>span {
+  display: block;
+  transform: translateZ(50px) scale(0.6);
+  text-shadow: -2px -1px 2px rgba(150, 150, 150, 1);
+  font-weight: 600 !important;
+
+}
+
+.c-logo:hover:after {
+  transform: translateZ(-100px);
+}
+
+.c-logo p {
+  padding: 10%;
+  padding-top: 20%;
+  opacity: 0;
+  transition: 0.5s;
+  transition-timing-function: ease;
+  transform: translateY(10%);
+}
+
+.c-logo:hover p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.c-logo:hover p:before {
+  font-family: Georgia, serif;
+  position: absolute;
+  font-size: 6em;
+  line-height: 1;
+  content: "\201C";
+  left: 0;
+  top: 5%;
+}
+
+.c-logo:hover p:after {
+  font-family: Georgia, serif;
+  position: absolute;
+  /* display: block; don't use this, it raised the quote too high from the bottom - defeated line-height? */
+  float: right;
+  font-size: 6em;
+  line-height: 1;
+  bottom: -0.5em;
+  content: "\201D";
+  right: 0;
+}
+
+.c-logo .avatar {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.5s;
+  transition-timing-function: ease;
+}
+
+.c-logo .avatar figure {
+  background: var(--bg-gradient-onyx);
+  border-radius: 14px;
+  box-shadow: var(--shadow-1);
+  border-radius: 20px;
+}
+
+.c-logo .avatar h4 {
+  color: #ff0057;
+}
+
+.c-logo:hover .avatar {
+  opacity: 1;
+  transform: translateY(-220%);
+}
+
+@media (max-width: 992px) {
+
+  .testimonials-list {
+    flex-direction: column;
+  }
+
+  .testimonials-item {
+    padding-top: 15%;
+  }
+
+  .flex-container,
+  .c-logo {
+    flex-direction: column;
+  }
+
+  .c-logo .avatar {
+    opacity: 1;
+    transform: translateY(-220%);
+  }
+
+  .c-logo p {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
