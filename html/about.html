@@ -3,15 +3,23 @@
     -->
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const tiltElement = document.querySelector('.c-logo');
-        VanillaTilt.init(tiltElement, {
-            max: 25,
-            speed: 10,
-            glare: true,
-            'max-glare': 0.4,
-        });
-    });
+
+    function destroyTilt() {
+        var mq = window.matchMedia("(max-width: 992px)");
+        if (mq.matches) {
+            console.log("Skipped tilt effect due to mobile devices");
+        } else {
+            document.addEventListener("DOMContentLoaded", function () {
+                const tiltElement = document.querySelector('.c-logo');
+                VanillaTilt.init(tiltElement, {
+                    max: 25,
+                    speed: 10,
+                    glare: true,
+                    'max-glare': 0.4,
+                });
+            });
+        }
+    }
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>

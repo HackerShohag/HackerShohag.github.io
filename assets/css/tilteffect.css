@@ -91,6 +91,17 @@
   border-radius: 20px;
 }
 
+.c-logo .avatar figure img {
+  width: 100px;
+  height: 100px;
+  transition: 0.5s;
+}
+
+.c-logo:hover .avatar figure img {
+  width: 60px;
+  height: 60px;
+}
+
 .c-logo .avatar h4 {
   color: #ff0057;
 }
