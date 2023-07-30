@@ -82,6 +82,7 @@
   align-items: center;
   transition: 0.5s;
   transition-timing-function: ease;
+  z-index: 1;
 }
 
 .c-logo .avatar figure {
@@ -128,7 +129,17 @@
 
   .c-logo .avatar {
     opacity: 1;
-    transform: translateY(-220%);
+    transform: translateY(-190%);
+  }
+
+  .c-logo:hover .avatar {
+    opacity: 1;
+    transform: translateY(-190%);
+  }
+
+  .c-logo .avatar figure img {
+    width: 60px;
+    height: 60px;
   }
 
   .c-logo p {
