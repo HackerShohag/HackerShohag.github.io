@@ -556,7 +556,7 @@ main {
 }
 
 .testimonials-item {
-  padding-top: 5%;
+  padding-top: 20%;
   min-width: 100%;
   scroll-snap-align: center
 }
