@@ -325,6 +325,9 @@ testimonials
         </ul>
     </div>
     <script src="../assets/js/slideshow.js"></script>
+    <script>
+        runSlideShow(".slideshow-wrapper", ".testimonials-item", 2, 3000);
+    </script>
 </section>
 
 <!-- 
@@ -335,7 +338,7 @@ testimonials
 
     <h3 class="h3 clients-title">Clients</h3>
 
-    <ul class="clients-list has-scrollbar">
+    <ul class="clients-list">
 
         <li class="clients-item">
             <a href="#">
@@ -372,7 +375,11 @@ testimonials
                 <img src="./assets/images/logo-6-color.png" alt="client logo">
             </a>
         </li>
-
     </ul>
+
+    <script src="../assets/js/slideshow.js"></script>
+    <script>
+        runSlideShow(".clients-list", "", 5, 2000);
+    </script>
 
 </section>

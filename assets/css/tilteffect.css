@@ -25,6 +25,7 @@
   transform-style: preserve-3d;
   transform: perspective(500px);
   box-shadow: 0 10px 10px -10px rgba(170, 170, 170, 0.205), 0 50px 100px 0 rgba(175, 175, 175, 0.2);
+  /* overflow: hidden; */
 }
 
 .c-logo>span {
@@ -146,4 +147,8 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.js-tilt-glare {
+  border-radius: inherit;
 }
