@@ -34,7 +34,7 @@ export default function ContactFormEmail({
               </Heading>
               <Text>{message}</Text>
               <Hr />
-              <Text>The sender's email is: {senderEmail}</Text>
+              <Text>The sender's email is: <a href={"mailto:" + senderEmail}>{senderEmail}</a></Text>
             </Section>
           </Container>
         </Body>
