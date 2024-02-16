@@ -10,7 +10,7 @@ import keyboarImg from "@/public/keyboard.png";
 export const links = [
   {
     name: "Home",
-    hash: "#home",
+    hash: "/",
   },
   {
     name: "About",
@@ -45,19 +45,19 @@ export const experiencesData = [
   },
   {
     title: "Front-End Developer",
-    location: "Orlando, FL",
+    location: "Shotti Bookings",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "I worked as a front-end developer at Shotti Bookings, a bus ticket management project. I also upskilled to the full stack.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2014",
   },
   {
     title: "Full-Stack Developer",
-    location: "Houston, TX",
+    location: "RUET Career Forum",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "As a club member and and dev Team Lead, I developed the official website of RUET Career Forum. I also worked on various projects.",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "2024",
   },
 ] as const;
 
