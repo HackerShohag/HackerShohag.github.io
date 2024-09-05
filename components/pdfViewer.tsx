@@ -12,10 +12,8 @@ const PdfViewer = () => {
                 className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
                 href=""
                 onClick={onOpen}
-            //   download
-            //   target="_blank"
             >
-                View CV{" "}
+                View Resume{" "}
                 <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
             </Link>
             <Modal size="5xl" isOpen={isOpen} onOpenChange={onOpenChange}>
