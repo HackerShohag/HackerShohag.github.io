@@ -49,7 +49,7 @@ export const experiencesData = [
     description:
       "I worked as a front-end developer at Shotti Bookings, a bus ticket management project. I also upskilled to the full stack.",
     icon: React.createElement(CgWorkAlt),
-    date: "2014",
+    date: "2024",
   },
   {
     title: "Full-Stack Developer",

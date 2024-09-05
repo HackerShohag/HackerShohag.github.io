@@ -24,7 +24,7 @@ export default function About() {
         As a Computer Science &amp; Engineering student with a keen interest in research, I am dedicated to delving deep into the realms of technology and innovation. I am currently pursuing my undergraduate degree in <span className="font-medium">Computer Science &amp; Engineering</span>, with a strong emphasis on research methodologies and computational problem-solving. My academic journey has been marked by a relentless pursuit of knowledge and exploration.
         My passion for programming led me to engage in intensive research projects, where I apply theoretical concepts to real-world challenges. I am particularly fascinated by the intersection of <span className="font-medium">artificial intelligence</span> and <span className="font-medium">machine learning</span>, seeking to unravel the mysteries of intelligent systems and their applications in diverse domains.
       </p>
-      {/* <Link href="/about" className="mt-8">Read more</Link> */}
+      <Link href="/about" className="mt-8">Read more</Link>
 
     </motion.section>
   );

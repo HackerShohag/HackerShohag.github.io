@@ -1,5 +1,4 @@
 import Header from "@/components/header";
-import "./globals.css";
 import { Inter } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import Footer from "@/components/footer";
@@ -7,11 +6,14 @@ import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 
+import "./globals.css";
+import Provider from "./provider";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Md. Abdullah AL Mamun (Shohag) | Personal Portfolio",
-  description: "I'm a full-stack developer based in Bangladesh. I specialize in React, Next.js, TypeScript, Tailwind and MongoDB. I'm open to full-time opportunities.",
+  description: "Md. Abdullah AL Mamun, also known as Abdullah AL Shohag is a full-stack developer based in Bangladesh, specializes in React, Next.js, TypeScript, Tailwind and MongoDB.",
 };
 
 export default function RootLayout({
@@ -30,16 +32,18 @@ export default function RootLayout({
         <div className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#946263]"></div>
         <div className="bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></div>
 
-        <ThemeContextProvider>
-          <ActiveSectionContextProvider>
-            <Header />
-            {children}
-            <Footer />
+        <Provider>
+          <ThemeContextProvider>
+            <ActiveSectionContextProvider>
+              <Header />
+              {children}
+              <Footer />
 
-            <Toaster position="top-right" />
-            <ThemeSwitch />
-          </ActiveSectionContextProvider>
-        </ThemeContextProvider>
+              <Toaster position="top-right" />
+              <ThemeSwitch />
+            </ActiveSectionContextProvider>
+          </ThemeContextProvider>
+        </Provider>
       </body>
     </html>
   );
