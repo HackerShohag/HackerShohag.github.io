@@ -1,3 +1,3 @@
-import { links } from "./data";
+import { siteConfig, SiteConfig } from "@/config/site";
 
-export type SectionName = (typeof links)[number]["name"];
+export type SectionName = (typeof siteConfig.navbarItems)[number]["name"];

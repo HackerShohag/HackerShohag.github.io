@@ -1,10 +1,10 @@
 import Typewriter from 'typewriter-effect';
 
-function TypeWriterEffect() {
+function TypeWriterEffect({ texts }: { texts: string[] }) {
   return (
     <Typewriter
       options={{
-        strings: ['ReactJS', 'NextJS', 'C++', 'Python'],
+        strings: texts,
         autoStart: true,
         loop: true,
       }}

@@ -1,59 +1,79 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "./section-heading";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
+import { useRef } from "react";
 import { experiencesData } from "@/lib/data";
-import { useSectionInView } from "@/lib/hooks";
-import { useTheme } from "@/context/theme-context";
+import { motion, useScroll, useTransform } from "framer-motion";
 
-export default function Experience() {
-  const { ref } = useSectionInView("Experience");
-  const { theme } = useTheme();
+import { Image } from "@nextui-org/react";
 
-  return (
-    <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
-      <SectionHeading>My experience</SectionHeading>
-      <VerticalTimeline lineColor="">
-        {experiencesData.map((item, index) => (
-          <React.Fragment key={index}>
-            <VerticalTimelineElement
-              contentStyle={{
-                background:
-                  theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
-                boxShadow: "none",
-                border: "1px solid rgba(0, 0, 0, 0.05)",
-                textAlign: "left",
-                padding: "1.3rem 2rem",
+type ExperienceProps = (typeof experiencesData)[number];
 
-              }}
-              contentArrowStyle={{
-                borderRight:
-                  theme === "light"
-                    ? "0.4rem solid #9ca3af"
-                    : "0.4rem solid rgba(255, 255, 255, 0.5)",
-              }}
-              date={item.date}
-              icon={item.icon}
-              iconStyle={{
-                background:
-                  theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
-                fontSize: "1.5rem",
-              }}
-            >
-              <h3 className="font-semibold capitalize">{item.title}</h3>
-              <p className="font-normal !mt-0">{item.location}</p>
-              <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
-                {item.description}
-              </p>
-            </VerticalTimelineElement>
-          </React.Fragment>
-        ))}
-      </VerticalTimeline>
-    </section>
-  );
+export default function ExperienceItem({
+    title,
+    location,
+    description,
+    date,
+    keypoints,
+    image,
+}: ExperienceProps) {
+    const ref = useRef<HTMLDivElement>(null);
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["0 1", "1.33 1"],
+    });
+    const xProgress = useTransform(scrollYProgress, [0, 1], [100, 0]);
+    const opacityProgress = useTransform(scrollYProgress, [0, 1], [0, 1]);
+
+    return (
+        <motion.div
+            ref={ref}
+            style={{
+                x: xProgress,
+                opacity: opacityProgress,
+                transition: "0.5s",
+            }}
+            className="group mb-3 sm:mb-8 last:mb-0"
+        >
+            <section className="sm:pr-8 relative my-20">
+                <div className="flex flex-col max-w-5xl gap-32 my-5">
+                    <div
+                        className="grid grid-cols-2 w-full gap-36"
+                    >
+                        <motion.div
+                            className="h-full content-center"
+                            initial={{ scale: 1 }}
+                            whileHover={{ scale: 1.1 }}
+                            transition={{ duration: 0.4 }}
+                        >
+                            <Image shadow="md" src={image} alt={title} width={450} height={250} />
+                        </motion.div>
+                        <div>
+                            <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-200">
+                                {title}
+                            </h1>
+                            <p className="text-lg text-gray-600 dark:text-gray-300">
+                                {location}
+                            </p>
+                            <p className="text-lg text-gray-600 dark:text-gray-300">
+                                {date}
+                            </p>
+                            <p className="text-lg text-gray-600 dark:text-gray-300">
+                                {description}
+                            </p>
+                            <ul className="text-lg text-gray-600 dark:text-gray-300 mt-10">
+                                {
+                                    keypoints.map((keypoint, index) => (
+                                        <li key={index} className="list-disc ml-4">
+                                            {keypoint}
+                                        </li>
+                                    ))
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </motion.div>
+    );
 }
