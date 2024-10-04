@@ -7,11 +7,12 @@ import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { siteConfig } from "@/config/site";
 
-import favico from "@/app/favicon.ico";
+import logo from "@/public/vector_x256.png";
 import ThemeSwitch from "@/components/theme-switch";
 
 import { sofia } from "@/config/fonts";
 import BottomMenu from "@/components/bottomMenu";
+import { Image } from "@nextui-org/react";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
@@ -70,15 +71,15 @@ export default function Header() {
       </header>
 
       <header className="z-[40] fixed bottom-0 left-0 w-full flex lg:hidden">
-        <nav className="flex w-full justify-between items-center bg-white shadow-2xl shadow-gray-800 dark:bg-gray-950 px-4 py-2">
+        <nav className="flex w-full justify-between items-center bg-white shadow-2xl shadow-gray-800 dark:bg-gray-950 px-4">
           <div className="flex items-center">
-            <img src={favico.src} alt="Logo" className="h-12 w-12" />
+            <Image radius="full" shadow="sm" src={logo.src} alt="Logo" className="h-8 w-8" />
           </div>
-          <div className={`${clsx(sofia.className)} text-3xl font-black text-gray-500 dark:text-gray-500`}>
+          <div className={`${clsx(sofia.className)} text-2xl font-black text-gray-500 dark:text-gray-500`}>
             ABD
           </div>
           <div className="flex items-center space-x-2">
-            <button className="theme-switch-icon"><ThemeSwitch className="flex lg:hidden" iconHeightClass="font-medium h-6 w-6" isFixed={false} /></button>
+            <button className="theme-switch-icon"><ThemeSwitch className="flex lg:hidden" iconHeightClass="font-medium h-4 w-4" isFixed={false} /></button>
             <BottomMenu />
           </div>
         </nav>

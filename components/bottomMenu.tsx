@@ -9,7 +9,7 @@ export default function BottomMenu() {
 
   return (
     <div className="flex flex-col gap-2">
-      <button onClick={onOpen} className="max-w-fit"><LuLayoutGrid className="h-6 w-6" /></button>
+      <button onClick={onOpen} className="max-w-fit"><LuLayoutGrid className="h-5 w-5" /></button>
       <Modal
         isOpen={isOpen}
         placement='bottom'
@@ -19,6 +19,7 @@ export default function BottomMenu() {
         classNames={{
           closeButton: "top-auto bottom-1",
         }}
+        backdrop="blur"
       >
         <ModalContent>
           {(onClose) => (
@@ -34,7 +35,7 @@ export default function BottomMenu() {
                           color="primary"
                           href={link.hash}
                           onClick={onClose}
-                          className="flex flex-col items-center gap-1 m-2 my-4 p-2 hover:text-green-600 rounded-md cursor-pointer"
+                          className="flex flex-col items-center gap-1 m-2 my-2 p-2 hover:text-green-600 rounded-md cursor-pointer"
                         >
                           <IconComponent className="h-6 w-6" />
                           <span className="text-xs">{link.name}</span>
