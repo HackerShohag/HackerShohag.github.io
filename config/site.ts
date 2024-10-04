@@ -1,3 +1,5 @@
+import { FaHome, FaUser, FaGraduationCap, FaBriefcase, FaTools, FaAward, FaCertificate, FaBook, FaUsers, FaProjectDiagram, FaBlog, FaEnvelope } from 'react-icons/fa';
+
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
@@ -10,51 +12,62 @@ export const siteConfig = {
 		{
 			name: "Home",
 			hash: "/",
+			icon: FaHome,
 		},
 		{
 			name: "About",
 			hash: "#about",
+			icon: FaUser,
 		},
 		{
 			name: "Academic",
 			hash: "#academic",
+			icon: FaGraduationCap,
 		},
 		{
 			name: "Experience",
 			hash: "#experience",
+			icon: FaBriefcase,
 		},
 		{
 			name: "Skills",
 			hash: "#skills",
+			icon: FaTools,
 		},
 		{
 			name: "Awards",
 			hash: "#awards",
+			icon: FaAward,
 		},
 		{
 			name: "Certifications",
 			hash: "#certifications",
+			icon: FaCertificate,
 		},
 		{
 			name: "Publications",
 			hash: "#publications",
+			icon: FaBook,
 		},
 		{
 			name: "Memberships",
 			hash: "#memberships",
+			icon: FaUsers,
 		},
-
 		{
 			name: "Projects",
 			hash: "#projects",
+			icon: FaProjectDiagram,
 		},
 		{
 			name: "Blogs",
 			hash: "#blogs",
+			icon: FaBlog,
 		},
 		{
 			name: "Contact",
 			hash: "#contact",
+			icon: FaEnvelope,
 		},
 	],
 	// socials: {

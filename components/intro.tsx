@@ -8,7 +8,8 @@ import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import PdfViewer from "./pdfViewer";
 import TypeWriterEffect from "./typewriter";
-import { socialLinks, typeWriterStrings, welcomeMessage } from "@/lib/data";
+import { Image } from "@nextui-org/react";
+import { aboutData, socialLinks, typeWriterStrings, welcomeMessage } from "@/lib/data";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -20,6 +21,14 @@ export default function Intro() {
       id="home"
       className="flex flex-col z-10 justify-center items-center h-[70vh] max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     >
+          <Image
+            shadow="md"
+            radius="full"
+            width={250}
+            src={aboutData.image}
+            alt="Shohag portrait"
+            className="object-cover border-[0.35rem] border-white shadow-xl sm:w-450 flex md:hidden"
+          />
       <motion.h1
         className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}

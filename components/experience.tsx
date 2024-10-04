@@ -35,11 +35,9 @@ export default function ExperienceItem({
             }}
             className="group mb-3 sm:mb-8 last:mb-0"
         >
-            <section className="sm:pr-8 relative my-20">
-                <div className="flex flex-col max-w-5xl gap-32 my-5">
-                    <div
-                        className="grid grid-cols-2 w-full gap-36"
-                    >
+            <section className="sm:pr-8 relative my-20 mx-10 justify-center">
+                <div className="flex flex-col max-w-5xl gap-32 my-5 justify-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-10 sm:gap-36 justify-center">
                         <motion.div
                             className="h-full content-center"
                             initial={{ scale: 1 }}
@@ -58,7 +56,7 @@ export default function ExperienceItem({
                             <p className="text-lg text-gray-600 dark:text-gray-300">
                                 {date}
                             </p>
-                            <p className="text-lg text-gray-600 dark:text-gray-300">
+                            <p className="text-lg text-gray-600 dark:text-gray-300 text-justify">
                                 {description}
                             </p>
                             <ul className="text-lg text-gray-600 dark:text-gray-300 mt-10">
