@@ -12,7 +12,7 @@ export default function Publications() {
     return (
         <section ref={ref} id="publications" className="scroll-mt-28 mb-28">
             <SectionHeading>My Publications</SectionHeading>
-            <div style={{ overflowX: "hidden" }}>
+            <div className="overflow-hidden">
                 {publicationsData.map((experience, index) => (
                     <React.Fragment key={index}>
                         <ExperienceItem {...experience} />

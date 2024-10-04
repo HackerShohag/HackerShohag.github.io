@@ -8,12 +8,12 @@ import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 
 export default function Awards() {
-    const { ref, inView } = useSectionInView("Awards", 0.3);
+    const { ref, inView } = useSectionInView("Awards", 0.2);
 
     return (
         <section ref={ref} id="awards" className="scroll-mt-28 mb-28">
             <SectionHeading>My Awards</SectionHeading>
-            <div className="flex w-full justify-center mt-20">
+            <div className="flex w-full justify-center mt-20 overflow-hidden">
                 <motion.div
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-full w-5/6"
                     initial={{ opacity: 0, y: -200 }}
