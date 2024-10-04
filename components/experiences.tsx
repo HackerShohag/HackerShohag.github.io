@@ -12,7 +12,7 @@ export default function Experiences() {
   return (
     <section ref={ref} id="experience" className="scroll-mt-28 mb-28">
       <SectionHeading>My Experience</SectionHeading>
-      <div>
+      <div style={{ overflowX: "hidden" }}>
         {experiencesData.map((experience, index) => (
           <React.Fragment key={index}>
             <ExperienceItem {...experience} />

@@ -73,7 +73,7 @@ export default function Header() {
       <header className="z-[40] fixed bottom-0 left-0 w-full flex lg:hidden">
         <nav className="flex w-full justify-between items-center bg-white shadow-2xl shadow-gray-800 dark:bg-gray-950 px-4">
           <div className="flex items-center">
-            <Image radius="full" shadow="sm" src={logo.src} alt="Logo" className="h-8 w-8" />
+            <Image radius="full" shadow="sm" src={logo.src} alt="Logo" className="h-8 w-8 bg-white" />
           </div>
           <div className={`${clsx(sofia.className)} text-2xl font-black text-gray-500 dark:text-gray-500`}>
             ABD

@@ -26,9 +26,8 @@ export default function SubmitBtn() {
       ) : (
         <>
           Submit{" "}
-          <FaPaperPlane />
           <motion.div
-            className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1"
+            className="transition-all group-hover:translate-x-1 group-hover:-translate-y-1"
             initial={{ x: 0, y: 0, scale: 1, rotate: 0 }}
             // animate={spiralAnimation}
           >
