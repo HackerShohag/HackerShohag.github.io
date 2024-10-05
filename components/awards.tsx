@@ -29,7 +29,7 @@ export default function Awards() {
                             <div className="flex w-full justify-center items-center h-24 mt-5 mx-5">
                                 {award.icon}
                             </div>
-                            <p className="mb-5 mx-5 text-xl justify-start text-justify">{award.description}</p>
+                            <p className="mb-5 mx-5 text-md sm:text-lg justify-start text-justify">{award.description}</p>
                         </motion.div>
                     ))}
                 </motion.div>

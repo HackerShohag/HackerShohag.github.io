@@ -56,10 +56,10 @@ export default function ExperienceItem({
                             <p className="text-lg text-gray-600 dark:text-gray-300">
                                 {date}
                             </p>
-                            <p className="text-lg text-gray-600 dark:text-gray-300 text-justify">
+                            <p className="text-md sm:text-lg text-gray-600 dark:text-gray-300 text-justify">
                                 {description}
                             </p>
-                            <ul className="text-lg text-gray-600 dark:text-gray-300 mt-10">
+                            <ul className="text-md sm:text-lg text-gray-600 dark:text-gray-300 mt-10">
                                 {
                                     keypoints.map((keypoint, index) => (
                                         <li key={index} className="list-disc ml-4">
