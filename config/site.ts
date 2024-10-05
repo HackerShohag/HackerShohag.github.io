@@ -1,9 +1,12 @@
 import { FaHome, FaUser, FaGraduationCap, FaBriefcase, FaTools, FaAward, FaCertificate, FaBook, FaUsers, FaProjectDiagram, FaBlog, FaEnvelope } from 'react-icons/fa';
 
 export type SiteConfig = typeof siteConfig;
+import logo from "@/public/vector_x256.png";
 
 export const siteConfig = {
 	name: "Md. Abdullah AL Mamun (Shohag)",
+	keyname: "ABD",
+	logo: logo.src,
 	shortname: "Personal Portfolio",
 	description: "Md. Abdullah AL Mamun, also known as Abdullah AL Shohag is a full-stack developer based in Bangladesh, specializes in React, Next.js, TypeScript, Tailwind and MongoDB.",
 	url: 'https://shohag.tech',

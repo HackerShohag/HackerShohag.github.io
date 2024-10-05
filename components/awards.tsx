@@ -3,7 +3,6 @@
 import React from "react";
 import SectionHeading from "@/components/section-heading";
 import { awardsData } from "@/lib/data";
-import Experience from "@/components/experience";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 
