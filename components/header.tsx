@@ -10,8 +10,7 @@ import { siteConfig } from "@/config/site";
 import ThemeSwitch from "@/components/theme-switch";
 
 import { sofia } from "@/config/fonts";
-import BottomMenu from "@/components/bottomMenu";
-import { Image } from "@nextui-org/react";
+import BottomMenu, { ContactMenu } from "@/components/bottomMenu";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
@@ -72,7 +71,7 @@ export default function Header() {
       <header className="z-[40] fixed bottom-0 left-0 w-full flex lg:hidden">
         <nav className="flex w-full justify-between items-center bg-white shadow-2xl shadow-gray-800 dark:bg-gray-950 px-4">
           <div className="flex items-center">
-            <Image radius="full" shadow="sm" src={siteConfig.logo} alt="Logo" className="h-8 w-8 bg-white" />
+            <ContactMenu />
           </div>
           <div className={`${clsx(sofia.className)} text-2xl font-black text-gray-500 dark:text-gray-500`}>
             {siteConfig.keyname}

@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import { Image } from "@nextui-org/react";
 import { aboutData } from "@/lib/data";
+import RandomFacts from "./randomFacts";
 
 export default function About() {
   const { ref } = useSectionInView("About");
@@ -39,6 +40,7 @@ export default function About() {
                 alt="Shohag portrait"
                 className="object-cover border-[0.35rem] border-white shadow-xl sm:w-450 hidden lg:flex"
               />
+              {/* <RandomFacts /> */}
             </motion.div>
           </div>
         </div>

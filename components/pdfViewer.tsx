@@ -2,6 +2,7 @@ import React from "react";
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure } from "@nextui-org/react";
 import Link from "next/link";
 import { HiDownload } from "react-icons/hi";
+import { siteConfig } from "@/config/site";
 
 const PdfViewer = () => {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -20,7 +21,7 @@ const PdfViewer = () => {
                 <ModalContent>
                     {(onClose) => (
                         <>
-                            <ModalHeader className="flex flex-col gap-1">Modal Title</ModalHeader>
+                            <ModalHeader className="flex flex-col gap-1">Resume of {" "} {siteConfig.name}</ModalHeader>
                             <ModalBody>
                                 <iframe
                                     src="/resume.pdf"

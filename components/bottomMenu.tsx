@@ -1,8 +1,11 @@
 import React from "react";
-import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure } from "@nextui-org/react";
+import { Image, Modal, ModalContent, ModalBody, useDisclosure } from "@nextui-org/react";
+import Link from "next/link";
+
 import { LuLayoutGrid } from "react-icons/lu";
 import { siteConfig } from "@/config/site";
-import Link from "next/link";
+import { contactsInfo } from "@/lib/data/contacts";
+
 
 export default function BottomMenu() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -28,7 +31,6 @@ export default function BottomMenu() {
                 <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
                   {
                     siteConfig.navbarItems.map((link) => {
-                      const IconComponent = link.icon; // Assuming `link.icon` contains the icon component from react-icons
                       return (
                         <Link
                           key={link.hash}
@@ -37,7 +39,7 @@ export default function BottomMenu() {
                           onClick={onClose}
                           className="flex flex-col items-center gap-1 m-2 my-2 p-2 hover:text-green-600 rounded-md cursor-pointer"
                         >
-                          <IconComponent className="h-6 w-6" />
+                          {link.icon}
                           <span className="text-xs">{link.name}</span>
                         </Link>
                       );
@@ -52,3 +54,53 @@ export default function BottomMenu() {
     </div>
   );
 }
+
+export function ContactMenu() {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
+  return (
+    <div className="flex flex-col gap-2">
+      <Image onClick={onOpen} radius="full" shadow="sm" src={siteConfig.logo} alt="Logo" className="h-8 w-8 bg-white" />
+      <Modal
+        isOpen={isOpen}
+        placement='bottom'
+        onOpenChange={onOpenChange}
+        size="5xl"
+        className="rounded-t-3xl rounded-b-none m-0 p-0 mx-0 px-0"
+        classNames={{
+          closeButton: "top-auto bottom-1",
+        }}
+        backdrop="blur"
+      >
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalBody>
+                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
+                  {
+                    contactsInfo.map((link) => {
+                      return (
+                        <Link
+                          target="_blank"
+                          key={link.name}
+                          color="primary"
+                          href={link.url}
+                          onClick={onClose}
+                          className="flex flex-col items-center gap-1 m-2 my-2 p-2 hover:text-green-600 rounded-md cursor-pointer"
+                        >
+                          {link.icon}
+                          <span className="text-xs">{link.name}</span>
+                        </Link>
+                      );
+                    })
+                  }
+                </div>
+              </ModalBody>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
+    </div>
+  );
+}
+

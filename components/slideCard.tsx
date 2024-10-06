@@ -9,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
-import '@/components/swiper.css';
+import '@/components/styles/swiper.css';
 
 // import required modules
 import { EffectCoverflow, Pagination, Autoplay, Navigation } from 'swiper/modules';

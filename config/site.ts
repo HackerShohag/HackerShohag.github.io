@@ -2,6 +2,7 @@ import { FaHome, FaUser, FaGraduationCap, FaBriefcase, FaTools, FaAward, FaCerti
 
 export type SiteConfig = typeof siteConfig;
 import logo from "@/public/vector_x256.png";
+import React from 'react';
 
 export const siteConfig = {
 	name: "Md. Abdullah AL Mamun (Shohag)",
@@ -15,62 +16,62 @@ export const siteConfig = {
 		{
 			name: "Home",
 			hash: "/",
-			icon: FaHome,
+			icon: React.createElement(FaHome),
 		},
 		{
 			name: "About",
 			hash: "#about",
-			icon: FaUser,
+			icon: React.createElement(FaUser),
 		},
 		{
 			name: "Academic",
 			hash: "#academic",
-			icon: FaGraduationCap,
+			icon: React.createElement(FaGraduationCap),
 		},
 		{
 			name: "Experience",
 			hash: "#experience",
-			icon: FaBriefcase,
+			icon: React.createElement(FaBriefcase),
 		},
 		{
 			name: "Skills",
 			hash: "#skills",
-			icon: FaTools,
+			icon: React.createElement(FaTools),
 		},
 		{
 			name: "Awards",
 			hash: "#awards",
-			icon: FaAward,
+			icon: React.createElement(FaAward),
 		},
 		{
 			name: "Certifications",
 			hash: "#certifications",
-			icon: FaCertificate,
+			icon: React.createElement(FaCertificate),
 		},
 		{
 			name: "Publications",
 			hash: "#publications",
-			icon: FaBook,
+			icon: React.createElement(FaBook),
 		},
 		{
 			name: "Memberships",
 			hash: "#memberships",
-			icon: FaUsers,
+			icon: React.createElement(FaUsers),
 		},
 		{
 			name: "Projects",
 			hash: "#projects",
-			icon: FaProjectDiagram,
+			icon: React.createElement(FaProjectDiagram),
 		},
 		{
 			name: "Blogs",
 			hash: "#blogs",
-			icon: FaBlog,
+			icon: React.createElement(FaBlog),
 		},
 		{
 			name: "Contact",
 			hash: "#contact",
-			icon: FaEnvelope,
+			icon: React.createElement(FaEnvelope),
 		},
 	],
 	// socials: {

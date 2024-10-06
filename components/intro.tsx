@@ -21,14 +21,14 @@ export default function Intro() {
       id="home"
       className="flex flex-col z-10 justify-center items-center h-[70vh] max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     >
-          <Image
-            shadow="md"
-            radius="full"
-            width={250}
-            src={aboutData.image}
-            alt="Shohag portrait"
-            className="object-cover border-[0.35rem] border-white shadow-xl sm:w-450 flex md:hidden"
-          />
+      <Image
+        shadow="md"
+        radius="full"
+        width={250}
+        src={aboutData.image}
+        alt="Shohag portrait"
+        className="object-cover border-[0.35rem] border-white shadow-xl sm:w-450 flex md:hidden"
+      />
       <motion.h1
         className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
