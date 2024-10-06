@@ -73,7 +73,7 @@ export default function Header() {
           <div className="flex items-center">
             <ContactMenu />
           </div>
-          <div className={`${clsx(sofia.className)} text-2xl font-black text-gray-500 dark:text-gray-500`}>
+          <div className={`absolute left-1/2 transform -translate-x-1/2 ${clsx(sofia.className)} text-2xl font-black text-gray-500 dark:text-gray-500 items-center`}>
             {siteConfig.keyname}
           </div>
           <div className="flex items-center space-x-2">
