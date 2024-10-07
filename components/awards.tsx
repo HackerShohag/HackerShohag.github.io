@@ -25,7 +25,7 @@ export default function Awards() {
                             className="rounded-lg shadow h-full w-full content-center grid grid-rows-2"
                             whileHover={{ scale: 1.05 }}
                         >
-                            <div className="flex w-full justify-center items-center h-24 mt-5 mx-5">
+                            <div className="flex w-full justify-center items-center">
                                 {award.icon}
                             </div>
                             <p className="mb-5 mx-5 text-md sm:text-lg justify-start text-justify">{award.description}</p>

@@ -12,7 +12,7 @@ export default function MembershipsAndAffliations() {
     return (
         <section ref={ref} id="memberships" className="scroll-mt-28 mb-28">
             <SectionHeading>Memberships & Affiliations</SectionHeading>
-            <div>
+            <div className="p-4">
                 {membershipsAndAffliationsData.map((project, index) => (
                     <React.Fragment key={index}>
                         <Project {...project} />

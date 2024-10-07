@@ -47,19 +47,19 @@ export default function ExperienceItem({
                             <Image shadow="md" src={image} alt={title} width={450} height={250} />
                         </motion.div>
                         <div>
-                            <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-200">
+                            <h1 className="text-lg sm:text-2xl font-bold text-gray-800 dark:text-gray-200">
                                 {title}
                             </h1>
-                            <p className="text-lg text-gray-600 dark:text-gray-300">
-                                {location}
+                            <p className="text-md font-sans italic sm:text-lg text-gray-600 dark:text-gray-300">
+                                {location} ({date})
                             </p>
-                            <p className="text-lg text-gray-600 dark:text-gray-300">
+                            {/* <p className="text-md sm:text-lg text-gray-600 dark:text-gray-300">
                                 {date}
-                            </p>
-                            <p className="text-md sm:text-lg text-gray-600 dark:text-gray-300 text-justify">
+                            </p> */}
+                            <p className="text-sm sm:text-md text-gray-600 dark:text-gray-300 text-justify">
                                 {description}
                             </p>
-                            <ul className="text-md sm:text-lg text-gray-600 dark:text-gray-300 mt-10">
+                            <ul className="text-sm sm:text-md text-gray-600 dark:text-gray-300 mt-10">
                                 {
                                     keypoints.map((keypoint, index) => (
                                         <li key={index} className="list-disc ml-4">

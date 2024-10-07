@@ -38,21 +38,21 @@
 }
 
 @media (max-width: 768px) {
-    .swiper-slide-showcase {
+    .swiper-slide {
         width: 100%;
         height: 260px;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    .swiper-slide-showcase {
+    .swiper-slide {
         width: 100%;
         height: 320px;
     }
 }
 
 @media (min-width: 1025px) {
-    .swiper-slide-showcase {
+    .swiper-slide {
         width: 550px;
         height: 360px;
     }
