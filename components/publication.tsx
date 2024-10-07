@@ -5,7 +5,6 @@ import { useRef } from "react";
 import { publicationsData } from "@/lib/data";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-import { Image } from "@nextui-org/react";
 import Link from "next/link";
 
 type PublicationProps = (typeof publicationsData)[number];

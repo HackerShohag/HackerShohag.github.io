@@ -7,7 +7,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 type ProjectProps = (typeof projectsData)[number];
 
-export default function Project({
+export default function Membership({
   title,
   description,
   tags,
