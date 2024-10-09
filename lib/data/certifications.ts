@@ -1,37 +1,106 @@
-import image_1 from '@/public/certificates/nasa1.jpg';
-import image_2 from '@/public/certificates/fkdc1.jpg';
-import image_3 from '@/public/certificates/chegRepublic1.jpg';
-import image_4 from '@/public/certificates/nasa2.jpg';
-import image_5 from '@/public/certificates/chegRepublic2.jpg';
-import image_6 from '@/public/certificates/recruitment1.jpg';
-import image_7 from '@/public/certificates/fkdc2.jpg';
-import image_8 from '@/public/certificates/fkdc3.jpg';
-import image_9 from '@/public/certificates/nasa3.jpg';
-import image_10 from '@/public/certificates/seminar2.jpg';
-import image_11 from '@/public/certificates/nasa6.jpg';
-import image_12 from '@/public/certificates/chegRepublic3.jpg';
-import image_13 from '@/public/certificates/fkdc4.jpg';
-import image_14 from '@/public/certificates/nasa4.jpg';
-import image_15 from '@/public/certificates/seminar1.jpg';
-import image_16 from '@/public/certificates/nasa5.jpg';
-import image_17 from '@/public/certificates/fkdc5.jpg';
+import centosToUbuntuMigration from '@/public/certificates/brighttalk-viewing-certificate-centos-to-ubuntu-migration-with-aws.png';
+import vectorDatabasesForAI from '@/public/certificates/brighttalk-viewing-certificate-vector-databases-for-generative-ai-applications.png';
+import coordinator9thRCF from '@/public/certificates/coordinator certificate_9th-RCF.png';
+import deepLearningKerasBadge from '@/public/certificates/Deep_Learning_Essentials_with_Keras_Badge20240710-7-5nt0t8.png';
+import embeddedSoftwareHardware from '@/public/certificates/Embedded Software and Hardware Architecture 8W9VEGZTVNCR.png';
+import introDeepLearningKeras from '@/public/certificates/Introduction to Deep Learning & Neural Networks with Keras GU2W83NTDWSM.png';
+import introEmbeddedSystems from '@/public/certificates/Introduction to Embedded Systems Softw are and Development Environments KXEVHE5NP3S7.png';
+import introProgrammingMATLAB1 from '@/public/certificates/Introduction to Programming with MATLAB NKRE5ZT52UYR.png';
+import introProgrammingMATLAB2 from '@/public/certificates/Introduction to Programming with MATLAB XUXH222JAUAX.png';
+import machineLearningPythonBadge from '@/public/certificates/Machine_Learning_with_Python_Badge20240710-8-omjqwj.png';
+import machineLearningPythonHonors from '@/public/certificates/Machine Learning with Python with Honors TTQQGQ6FXE3D.png';
+import matlabDeepLearningOnramp from '@/public/certificates/MATLAB_Deep_learning_Onramp_certificate.png';
+import matlabMachineLearningOnramp from '@/public/certificates/MATLAB_Machine_learning_Onramp_certificate.png';
+import matlabOnramp2018 from '@/public/certificates/MATLAB_Onramp_certificate_2018.png';
+import matlabOnramp from '@/public/certificates/MATLAB_Onramp_certificate.png';
+import volunteer8thRCF from '@/public/certificates/volunteer certificate_8th-RCF.png';
+import youthOlympiad2021 from '@/public/certificates/Youth_Olympiad_2021.png';
 
 export const certificationsData = [
-    { src: image_1.src, title: 'NASA Certificate 1' },
-    { src: image_2.src, title: 'FKDC Certificate 1' },
-    { src: image_3.src, title: 'Czech Republic Certificate 1' },
-    { src: image_4.src, title: 'NASA Certificate 2' },
-    { src: image_5.src, title: 'Czech Republic Certificate 2' },
-    { src: image_6.src, title: 'Recruitment Certificate 1' },
-    { src: image_7.src, title: 'FKDC Certificate 2' },
-    { src: image_8.src, title: 'FKDC Certificate 3' },
-    { src: image_9.src, title: 'NASA Certificate 3' },
-    { src: image_10.src, title: 'Seminar Certificate 2' },
-    { src: image_11.src, title: 'NASA Certificate 6' },
-    { src: image_12.src, title: 'Czech Republic Certificate 3' },
-    { src: image_13.src, title: 'FKDC Certificate 4' },
-    { src: image_14.src, title: 'NASA Certificate 4' },
-    { src: image_15.src, title: 'Seminar Certificate 1' },
-    { src: image_16.src, title: 'NASA Certificate 5' },
-    { src: image_17.src, title: 'FKDC Certificate 5' },
+  {
+    src: centosToUbuntuMigration.src,
+    title: "BrightTalk Viewing Certificate - CentOS to Ubuntu Migration with AWS",
+    link: "https://example.com/centos-to-ubuntu-migration",
+  },
+  {
+    src: vectorDatabasesForAI.src,
+    title: "BrightTalk Viewing Certificate - Vector Databases for Generative AI Applications",
+    link: "https://example.com/vector-databases-for-ai",
+  },
+  {
+    src: coordinator9thRCF.src,
+    title: "Coordinator Certificate - 9th RCF",
+    link: "https://example.com/coordinator-9th-rcf",
+  },
+  {
+    src: deepLearningKerasBadge.src,
+    title: "Deep Learning Essentials with Keras Badge",
+    link: "https://example.com/deep-learning-keras-badge",
+  },
+  {
+    src: embeddedSoftwareHardware.src,
+    title: "Embedded Software and Hardware Architecture",
+    link: "https://example.com/embedded-software-hardware",
+  },
+  {
+    src: introDeepLearningKeras.src,
+    title: "Introduction to Deep Learning & Neural Networks with Keras",
+    link: "https://example.com/intro-deep-learning-keras",
+  },
+  {
+    src: introEmbeddedSystems.src,
+    title:
+      "Introduction to Embedded Systems Software and Development Environments",
+    link: "https://example.com/intro-embedded-systems",
+  },
+  {
+    src: introProgrammingMATLAB1.src,
+    title: "Introduction to Programming with MATLAB (NKRE5ZT52UYR)",
+    link: "https://example.com/intro-programming-matlab-1",
+  },
+  {
+    src: introProgrammingMATLAB2.src,
+    title: "Introduction to Programming with MATLAB (XUXH222JAUAX)",
+    link: "https://example.com/intro-programming-matlab-2",
+  },
+  {
+    src: machineLearningPythonBadge.src,
+    title: "Machine Learning with Python Badge",
+    link: "https://example.com/machine-learning-python-badge",
+  },
+  {
+    src: machineLearningPythonHonors.src,
+    title: "Machine Learning with Python with Honors",
+    link: "https://example.com/machine-learning-python-honors",
+  },
+  {
+    src: matlabDeepLearningOnramp.src,
+    title: "MATLAB Deep Learning Onramp Certificate",
+    link: "https://example.com/matlab-deep-learning-onramp",
+  },
+  {
+    src: matlabMachineLearningOnramp.src,
+    title: "MATLAB Machine Learning Onramp Certificate",
+    link: "https://example.com/matlab-machine-learning-onramp",
+  },
+  {
+    src: matlabOnramp2018.src,
+    title: "MATLAB Onramp Certificate 2018",
+    link: "https://example.com/matlab-onramp-2018",
+  },
+  {
+    src: matlabOnramp.src,
+    title: "MATLAB Onramp Certificate",
+    link: "https://example.com/matlab-onramp",
+  },
+  {
+    src: volunteer8thRCF.src,
+    title: "Volunteer Certificate - 8th RCF",
+    link: "https://example.com/volunteer-8th-rcf",
+  },
+  {
+    src: youthOlympiad2021.src,
+    title: "Youth Olympiad 2021",
+    link: "https://example.com/youth-olympiad-2021",
+  },
 ] as const;

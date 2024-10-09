@@ -21,13 +21,14 @@
 } */
 
 .swiper {
-    width: 100%;
+    width: 20%;
 }
 
 .swiper-slide-card {
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
+    overflow: hidden;
 }
 
 .swiper-slide {
@@ -35,26 +36,28 @@
     background-size: cover;
     width: 480px;
     height: 360px;
+    overflow: hidden;
 }
+
 
 @media (max-width: 768px) {
     .swiper-slide {
-        width: 100%;
-        height: 260px;
+        width: 400px;
+        height: auto; /* Adjust height automatically to maintain aspect ratio */
     }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .swiper-slide {
-        width: 100%;
-        height: 320px;
+        width: 490px;
+        height: auto; /* Adjust height automatically to maintain aspect ratio */
     }
 }
 
 @media (min-width: 1025px) {
     .swiper-slide {
-        width: 550px;
-        height: 360px;
+        width: 470px;
+        height: auto;
     }
 }
 

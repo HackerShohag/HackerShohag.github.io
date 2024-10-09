@@ -37,7 +37,7 @@ export default function PublicationItem({
             }}
             className="w-full"
         >
-                <div className="flex flex-col max-w-2xl my-5 justify-center border shadow-md p-5 rounded-lg transition-all hover:scale-105 hover:cursor-pointer">
+                <div className="flex flex-col my-5 justify-center border shadow-md p-5 rounded-lg transition-all hover:scale-105 hover:cursor-pointer">
                     <Link href={link} passHref>
                         <h1 className="text-lg sm:text-2xl font-bold text-gray-800 dark:text-gray-200">
                             {title}

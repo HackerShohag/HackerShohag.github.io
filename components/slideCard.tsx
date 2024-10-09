@@ -15,10 +15,12 @@ import '@/components/styles/slide-card.css';
 import { EffectCoverflow, Pagination, Autoplay, Navigation } from 'swiper/modules';
 import { Image } from '@nextui-org/image';
 import { Card, CardFooter } from '@nextui-org/react';
+import Link from 'next/link';
 
 interface certificateImage {
     src: string;
     title: string;
+    link: string;
 }
 
 interface SlideCardProps {
@@ -41,7 +43,7 @@ export default function SlideCard({ images }: SlideCardProps) {
                 slideShadows: true,
             }}
             modules={[EffectCoverflow, Pagination, Autoplay, Navigation]}
-            className="swiper-slide-card"
+            className="swiper-slide-card overflow-hidden"
             loop={true}
             autoplay={{
                 delay: 3000,
@@ -50,16 +52,19 @@ export default function SlideCard({ images }: SlideCardProps) {
         >
             {
                 images.map((image, index) => (
-                    <SwiperSlide title={image.title} key={index} className='overflow-hidden'>
+                    <SwiperSlide title={image.title} key={index} className='overflow-hidden rounded-2xl'>
                         {/* <Image src={image.src} alt="slide" radius='none' className='h-full' /> */}
                         <Card
                             isFooterBlurred
                             radius="lg"
                             className="border-none w-full h-full"
+                            as={Link}
+                            href={image.link}
+                            target='_blank'
                         >
                             <Image
                                 alt="Woman listing to music"
-                                className="object-cover"
+                                className="object-cover p-5"
                                 // height={200}
                                 src={image.src}
                             // width={200}
