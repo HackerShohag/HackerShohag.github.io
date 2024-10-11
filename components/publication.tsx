@@ -51,9 +51,14 @@ export default function PublicationItem({
                         <p className="text-md sm:text-lg italic text-gray-600 dark:text-gray-300">
                             {authors.join(", ")}
                         </p>
-                        <p className="text-sm sm:text-md text-gray-600 dark:text-gray-300 text-justify">
+                        <p className="text-sm sm:text-md text-gray-600 dark:text-gray-300 text-justify break-words">
                             {shortDescription}
                         </p>
+                    </Link>
+                    <Link href={link} passHref>
+                        <span className="text-sm sm:text-md text-blue-500 dark:text-blue-300 hover:underline">
+                            Read more
+                        </span>
                     </Link>
                 </div>
         </motion.div>
