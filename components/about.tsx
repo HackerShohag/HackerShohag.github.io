@@ -9,15 +9,20 @@ import { aboutData } from "@/lib/data";
 import RandomFacts from "./randomFacts";
 
 export default function About() {
-  const { ref } = useSectionInView("About");
+  const { ref, inView } = useSectionInView("About", 0.2);
+
+  const textVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   return (
     <motion.section
       ref={ref}
       className="my-20 mx-5 md:mx-32 max-w-[75rem] text-center leading-8 sm:mb-40 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.175 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+      transition={{ duration: 0.2 }}
       id="about"
     >
       <SectionHeading>About me</SectionHeading>
@@ -26,7 +31,7 @@ export default function About() {
           <div className="relative">
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
+              animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
               transition={{
                 type: "tween",
                 duration: 0.2,
@@ -45,12 +50,23 @@ export default function About() {
           </div>
         </div>
         <div className="flex flex-col text-justify text-sm sm:text-lg gap-5 md:col-span-3 lg:col-span-2">
-          <p className="mb-3">
+          <motion.p
+            className="mb-3"
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={textVariants}
+            transition={{ delay: 0.3 }}
+          >
             {aboutData.firstParagraph}
-          </p>
-          <p>
+          </motion.p>
+          <motion.p
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={textVariants}
+            transition={{ delay: 0.5 }}
+          >
             {aboutData.secondParagraph}
-          </p>
+          </motion.p>
         </div>
       </div>
     </motion.section>

@@ -3,35 +3,20 @@
 import React from "react";
 import SectionHeading from "@/components/section-heading";
 import { awardsData } from "@/lib/data";
-import { motion } from "framer-motion";
-import { useSectionInView } from "@/lib/hooks";
+import Award from "@/components/award";
+
 
 export default function Awards() {
-    const { ref, inView } = useSectionInView("Awards", 0.2);
 
     return (
-        <section ref={ref} id="awards" className="scroll-mt-28 mb-28">
+        <section id="awards" className="scroll-mt-28 mb-28">
             <SectionHeading>My Awards</SectionHeading>
             <div className="flex w-full justify-center mt-20 overflow-hidden">
-                <motion.div
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl w-5/6"
-                    initial={{ opacity: 0, y: -200 }}
-                    animate={inView ? { opacity: [0, .25, 1], y: 0 } : {}}
-                    transition={{ duration: 0.4 }}
-                >
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-5 max-w-7xl w-5/6">
                     {awardsData.map((award, index) => (
-                        <motion.div
-                            key={index}
-                            className="rounded-lg shadow h-full w-full content-center grid grid-rows-2"
-                            whileHover={{ scale: 1.05 }}
-                        >
-                            <div className="flex w-full justify-center items-center">
-                                {award.icon}
-                            </div>
-                            <p className="mb-5 mx-5 text-md sm:text-lg justify-start text-justify">{award.description}</p>
-                        </motion.div>
+                        <Award key={index} award={award} />
                     ))}
-                </motion.div>
+                </div>
             </div>
         </section>
     );
