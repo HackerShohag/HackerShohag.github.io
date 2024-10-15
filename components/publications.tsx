@@ -12,7 +12,7 @@ export default function Publications() {
     return (
         <section ref={ref} id="publications" className="scroll-mt-28 mb-28">
             <SectionHeading>My Publications</SectionHeading>
-            <div className="flex flex-col overflow-hidden w-full p-5 px-10">
+            <div className="flex flex-col overflow-hidden w-full p-5 px-3 sm:px-10">
                 {publicationsData.map((publication, index) => (
                     <React.Fragment key={index}>
                         <PublicationItem {...publication} />
