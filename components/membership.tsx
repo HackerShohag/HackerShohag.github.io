@@ -35,7 +35,7 @@ export default function Membership({ title, description, imageUrl, className }: 
       className={`group mb-3 sm:mb-8 p-5 last:mb-0 bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden relative h-fit hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20 text-center ${className}`}
     >
       <h3 className="text-xl sm:text-2xl font-semibold">{title}</h3>
-      <div className="grid grid-cols-2 text-justify items-center gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 text-justify items-center gap-10">
         <div className="">
           <p className={`${clsx(signika.className)}text-sm sm:text-md mt-2 leading-relaxed text-gray-700 dark:text-white/70`}>
             <span className="text-2xl sm:text-3xl">{description.charAt(0)}</span>
