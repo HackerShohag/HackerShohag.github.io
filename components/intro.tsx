@@ -10,6 +10,7 @@ import PdfViewer from "./pdfViewer";
 import TypeWriterEffect from "./typewriter";
 import { Image } from "@nextui-org/react";
 import { aboutData, socialLinks, typeWriterStrings, welcomeMessage } from "@/lib/data";
+import { itim, sofia } from "@/config/fonts";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -34,8 +35,8 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">{welcomeMessage}</span>
-        <span className="underline"><TypeWriterEffect texts={typeWriterStrings as unknown as string[]} /></span>
+        <span className={`${sofia.className} font-bold`}>{welcomeMessage}</span>
+        <span className={`${itim.className} underline`}><TypeWriterEffect texts={typeWriterStrings as unknown as string[]} /></span>
 
       </motion.h1>
 

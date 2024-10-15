@@ -17,7 +17,7 @@ interface BlogItem {
 export default function Blog({ blogItem, className }: { blogItem: BlogItem; className?: string }) {
     return (
         <motion.div whileHover={{ scale: 1.05 }} className={className}>
-            <Card className="max-w-[330px]">
+            <Card href={blogItem.link} as={Link} className="max-w-[330px]">
                 <CardBody className="p-0">
                     <Image
                         alt={blogItem.title}

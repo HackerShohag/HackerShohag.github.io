@@ -51,7 +51,7 @@ export default function Contact() {
         </p>
 
         <form
-          className="flex flex-col w-full max-w-[50rem] px-10 mt-10 dark:text-black"
+          className="flex flex-col w-full max-w-[50rem] px-5 mt-10 dark:text-black"
           action={async (formData) => {
             const { data, error } = await sendEmail(formData);
 

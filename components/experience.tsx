@@ -6,6 +6,7 @@ import { experiencesData } from "@/lib/data";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 import { Image } from "@nextui-org/react";
+import { useSectionInView } from "@/lib/hooks";
 
 type ExperienceProps = (typeof experiencesData)[number];
 
@@ -18,6 +19,7 @@ export default function ExperienceItem({
     image,
 }: ExperienceProps) {
     const ref = useRef<HTMLDivElement>(null);
+
     const { scrollYProgress } = useScroll({
         target: ref,
         offset: ["0 1", "1.33 1"],

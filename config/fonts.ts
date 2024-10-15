@@ -1,4 +1,4 @@
-import { Fira_Code as FontMono, Inter as FontSans, Dancing_Script, Alex_Brush, Sofia } from "next/font/google";
+import { Fira_Code as FontMono, Inter as FontSans, Dancing_Script, Alex_Brush, Sofia, Signika, Itim } from "next/font/google";
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -26,3 +26,15 @@ export const sofia = Sofia({
   variable: "--font-sofia",
   weight: "400"
 })
+
+export const signika = Signika({
+  subsets: ["latin"],
+  variable: "--font-assistant",
+  weight: "400"
+});
+
+export const itim = Itim({
+  subsets: ["latin"],
+  variable: "--font-itim",
+  weight: "400"
+});

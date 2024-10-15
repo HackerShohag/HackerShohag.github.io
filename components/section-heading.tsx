@@ -1,3 +1,4 @@
+import { itim } from "@/config/fonts";
 import React from "react";
 
 type SectionHeadingProps = {
@@ -6,7 +7,7 @@ type SectionHeadingProps = {
 
 export default function SectionHeading({ children }: SectionHeadingProps) {
   return (
-    <h2 className="text-3xl font-medium uppercase mb-8 text-center">
+    <h2 className={`${itim.className} text-3xl sm:text-5xl font-medium uppercase mb-8 text-center`}>
       {children}
     </h2>
   );

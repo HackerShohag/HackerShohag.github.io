@@ -2,17 +2,21 @@
 
 import { useRef } from "react";
 import { projectsData } from "@/lib/data";
-import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Image } from "@nextui-org/react";
+import clsx from "clsx";
+import { signika } from "@/config/fonts";
 
-type ProjectProps = (typeof projectsData)[number];
 
-export default function Membership({
-  title,
-  description,
-  tags,
-  imageUrl,
-}: ProjectProps) {
+interface MembershipProps {
+  readonly title: string;
+  readonly description: string;
+  readonly tags: readonly string[];
+  readonly imageUrl: string;
+  className?: string;
+}
+
+export default function Membership({ title, description, imageUrl, className }: MembershipProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -28,44 +32,25 @@ export default function Membership({
         scale: scaleProgess,
         opacity: opacityProgess,
       }}
-      className="group mb-3 sm:mb-8 last:mb-0"
+      className={`group mb-3 sm:mb-8 p-5 last:mb-0 bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden relative h-fit hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20 text-center ${className}`}
     >
-      <section className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative h-fit hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
-          <h3 className="text-xl sm:text-2xl font-semibold">{title}</h3>
-          <p className="text-sm sm:text-lg mt-2 leading-relaxed text-gray-700 dark:text-white/70">
-            {description}
+      <h3 className="text-xl sm:text-2xl font-semibold">{title}</h3>
+      <div className="grid grid-cols-2 text-justify items-center gap-10">
+        <div className="">
+          <p className={`${clsx(signika.className)}text-sm sm:text-md mt-2 leading-relaxed text-gray-700 dark:text-white/70`}>
+            <span className="text-2xl sm:text-3xl">{description.charAt(0)}</span>
+            {description.slice(1)}
           </p>
-          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
-            {tags.map((tag, index) => (
-              <li
-                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
-                key={index}
-              >
-                {tag}
-              </li>
-            ))}
-          </ul>
         </div>
 
         <Image
           src={imageUrl}
           alt="Project I worked on"
-          quality={95}
-          className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
-            transition 
-            group-hover:scale-[1.04]
-            group-hover:-translate-x-3
-            group-hover:translate-y-3
-            group-hover:-rotate-2
-
-            group-even:group-hover:translate-x-3
-            group-even:group-hover:translate-y-3
-            group-even:group-hover:rotate-2
-
-            group-even:right-[initial] group-even:-left-40"
+          className="my-5"
+          height={200}
+          width={400}
         />
-      </section>
+      </div>
     </motion.div>
   );
 }
