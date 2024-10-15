@@ -41,7 +41,7 @@ export default function RandomFacts({ className }: { className?: string }) {
         }}
       >
         {facts.map((fact, index) => (
-          <SwiperSlide className='p-3' key={index}>{fact}</SwiperSlide>
+          <SwiperSlide className='p-3' key={index} title={fact}>{fact}</SwiperSlide>
         ))}
       </Swiper>
     </div>

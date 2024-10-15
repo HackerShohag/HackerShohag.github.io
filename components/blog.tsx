@@ -29,15 +29,13 @@ export default function Blog({ blogItem, className }: { blogItem: BlogItem; clas
                     />
                 </CardBody>
                 <CardHeader className="pb-0 pt-4 px-4 flex-col items-start">
-                    <h4 className="font-bold text-large">{blogItem.title}</h4>
-                    <p className="text-small text-default-500 text-justify">
-                        {blogItem.description}
-                        <Link href={blogItem.link} passHref>
-                        <span className="text-sm sm:text-md text-blue-500 dark:text-blue-300 hover:underline">
-                            {" "}Read more
-                        </span>
-                    </Link>
-                    </p>
+                    <h2 className="font-bold text-large">{blogItem.title}</h2>
+                    <div className="text-small text-default-500 text-justify">
+                        {blogItem.description} {" "}
+                            <span className="text-sm sm:text-md text-blue-500 dark:text-blue-300 hover:underline">
+                                Read more
+                            </span>
+                    </div>
                 </CardHeader>
                 <CardFooter className="flex gap-2 pt-2">
                     {blogItem.tags.map((tag, index) => (
