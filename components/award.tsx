@@ -25,7 +25,7 @@ export default function Award( { award }: { award: AwardProps }) {
             <div className="flex mt-5 mb-2 w-full justify-center items-center">
                 {award.icon}
             </div>
-            <p className="mb-5 mx-5 text-md sm:text-lg justify-start text-justify">{award.description}</p>
+            <p className="mb-5 mx-2 sm:mx-5 text-md sm:text-lg justify-start text-justify">{award.description}</p>
         </motion.div>
     );
 }

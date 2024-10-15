@@ -1,48 +1,8 @@
-/* effects cards */
-
-#app { height: 100% }
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background: #fff;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
-
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
-#app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper {
+.random-facts {
   width: 240px;
   height: 320px;
 }
-
-.swiper-slide {
+.random-facts .swiper-slide {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,42 +12,30 @@ body {
   color: #fff;
 }
 
-.swiper-slide:nth-child(1n) {
-    background-color: #f0f8ff; /* Alice Blue */
+.random-facts .swiper-slide:nth-child(1n) {
+  background-color: #3333CC; /* 80% Blue, 20% Green */
 }
 
-.swiper-slide:nth-child(2n) {
-    background-color: #e6e6fa; /* Lavender */
+.random-facts .swiper-slide:nth-child(2n) {
+  background-color: #4D4DB3; /* 70% Blue, 30% Green */
 }
 
-.swiper-slide:nth-child(3n) {
-    background-color: #f5f5dc; /* Beige */
+.random-facts .swiper-slide:nth-child(3n) {
+  background-color: #669999; /* 60% Blue, 40% Green */
 }
 
-.swiper-slide:nth-child(4n) {
-    background-color: #fafad2; /* Light Goldenrod Yellow */
+.random-facts .swiper-slide:nth-child(4n) {
+  background-color: #7FBF80; /* 50% Blue, 50% Green */
 }
 
-.swiper-slide:nth-child(5n) {
-    background-color: #ffe4e1; /* Misty Rose */
+.random-facts .swiper-slide:nth-child(5n) {
+  background-color: #C6D6B3; /* 20% Green, 80% Gray */
 }
 
-.swiper-slide:nth-child(6n) {
-    background-color: #f0fff0; /* Honeydew */
+.random-facts .swiper-slide:nth-child(6n) {
+  background-color: #BFBFBF; /* Lighter Gray */
 }
 
-.swiper-slide:nth-child(7n) {
-    background-color: #f5fffa; /* Mint Cream */
-}
-
-.swiper-slide:nth-child(8n) {
-    background-color: #f0ffff; /* Azure */
-}
-
-.swiper-slide:nth-child(9n) {
-    background-color: #fff5ee; /* Seashell */
-}
-
-.swiper-slide:nth-child(10n) {
-    background-color: #f8f8ff; /* Ghost White */
+.random-facts .swiper-slide:nth-child(7n) {
+  background-color: #808080; /* Pure Gray */
 }

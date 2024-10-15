@@ -1,15 +1,32 @@
+import { TypeWriterString_T } from '@/lib/data';
 import Typewriter from 'typewriter-effect';
 
-function TypeWriterEffect({ texts }: { texts: string[] }) {
+export default function TypeWriterEffect({ texts }: { texts: TypeWriterString_T[] }) {
   return (
     <Typewriter
       options={{
-        strings: texts,
         autoStart: true,
-        loop: true,
+        loop: true
+      }}
+      onInit={(typewriter) => {
+        typewriter.typeString("I am ");
+        texts.forEach(({ prefix, items }) => {
+          typewriter
+            .typeString(prefix)
+            .callFunction(() => {
+              console.log(prefix);
+            });
+          typewriter.typeString(" ");
+          items.forEach((item, index) => {
+            typewriter
+              .typeString(item)
+              .pauseFor(500);
+              typewriter.deleteChars(item.length);
+          });
+
+          typewriter.deleteChars(prefix.length + 1).start();
+        });
       }}
     />
-  )
-}
-
-export default TypeWriterEffect;
+  );
+};

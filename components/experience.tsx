@@ -6,7 +6,6 @@ import { experiencesData } from "@/lib/data";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 import { Image } from "@nextui-org/react";
-import { useSectionInView } from "@/lib/hooks";
 
 type ExperienceProps = (typeof experiencesData)[number];
 
@@ -33,18 +32,18 @@ export default function ExperienceItem({
             style={{
                 x: xProgress,
                 opacity: opacityProgress,
-                transition: "0.5s",
+                transition: "0.5s linear",
             }}
             className="group mb-3 sm:mb-8 last:mb-0"
         >
-            <section className="sm:pr-8 relative my-20 mx-10 justify-center">
+            <section className="sm:pr-8 relative mx-2 sm:mx-5 justify-center">
                 <div className="flex flex-col max-w-5xl gap-32 my-5 justify-center">
                     <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-10 sm:gap-36 justify-center">
                         <motion.div
                             className="h-full content-center"
                             initial={{ scale: 1 }}
                             whileHover={{ scale: 1.1 }}
-                            transition={{ duration: 0.4 }}
+                            transition={{ duration: 0.4, ease: "linear" }}
                         >
                             <Image shadow="md" src={image} alt={title} width={450} height={250} />
                         </motion.div>

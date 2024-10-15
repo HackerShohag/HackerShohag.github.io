@@ -52,22 +52,22 @@ export default function SlideCard({ images }: SlideCardProps) {
         >
             {
                 images.map((image, index) => (
-                    <SwiperSlide title={image.title} key={index} className='overflow-hidden rounded-2xl'>
+                    <SwiperSlide title={image.title} key={index} className='overflow-hidden rounded-2xl shadow-xl'>
                         {/* <Image src={image.src} alt="slide" radius='none' className='h-full' /> */}
                         <Card
                             isFooterBlurred
                             radius="lg"
-                            className="border-none w-full h-full"
+                            className="border-none w-full h-full bg-white"
                             as={Link}
                             href={image.link}
                             target='_blank'
                         >
                             <Image
-                                alt="Woman listing to music"
+                                alt={image.title}
                                 className="object-cover p-5"
                                 // height={200}
                                 src={image.src}
-                            // width={200}
+                                // width={200}
                             />
                             <CardFooter className="justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
                                 <p className="text-md sm:text-lg font-bold text-black/80">{image.title}</p>

@@ -10,26 +10,40 @@ import '@/components/styles/random-facts.css';
 
 // import required modules
 import { EffectCards } from 'swiper/modules';
+import { itim } from '@/config/fonts';
 
-export default function RandomFacts() {
+const facts = [
+  "I am coding since 10th grade!",
+  "I like idle time!",
+  "My friends call me AB!",
+  "I like to explore different fields!",
+  "Python was always my second favourite!",
+  "My journey started with MATLAB!",
+  "My birthname is Shohag!"
+];
+
+export default function RandomFacts({ className }: { className?: string }) {
   return (
-    <>
+    <div className={`${itim.className} flex flex-col justify-between gap-5 ${className}`}>
+      <h4 className="text-2xl font-bold text-center">Random Facts</h4>
       <Swiper
+        title='Random Facts'
         effect={'cards'}
+        initialSlide={7}
         grabCursor={true}
         modules={[EffectCards]}
-        className="mySwiper text-black"
+        className="random-facts text-black"
+        cardsEffect={{
+          slideShadows: true,
+          rotate: true,
+          perSlideRotate: 10,
+          perSlideOffset: 30,
+        }}
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        {facts.map((fact, index) => (
+          <SwiperSlide className='p-3' key={index}>{fact}</SwiperSlide>
+        ))}
       </Swiper>
-    </>
+    </div>
   );
 }

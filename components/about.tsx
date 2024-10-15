@@ -38,15 +38,15 @@ export default function About() {
                 duration: 0.2,
               }}
             >
-              <Image
+              {/* <Image
                 shadow="md"
                 radius="full"
                 width={300}
                 src={aboutData.image}
                 alt="Shohag portrait"
                 className="object-cover border-[0.35rem] border-white shadow-xl sm:w-450 hidden lg:flex"
-              />
-              {/* <RandomFacts /> */}
+              /> */}
+              <RandomFacts className="hidden lg:flex" />
             </motion.div>
           </div>
         </div>
