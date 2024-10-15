@@ -4,7 +4,6 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
-import { Image } from "@nextui-org/react";
 import { aboutData } from "@/lib/data";
 import RandomFacts from "./randomFacts";
 import { itim } from "@/config/fonts";
@@ -38,19 +37,11 @@ export default function About() {
                 duration: 0.2,
               }}
             >
-              {/* <Image
-                shadow="md"
-                radius="full"
-                width={300}
-                src={aboutData.image}
-                alt="Shohag portrait"
-                className="object-cover border-[0.35rem] border-white shadow-xl sm:w-450 hidden lg:flex"
-              /> */}
               <RandomFacts className="hidden lg:flex" />
             </motion.div>
           </div>
         </div>
-        <div className="flex flex-col text-justify text-sm sm:text-lg gap-5 md:col-span-3 lg:col-span-2">
+        <div className="flex flex-col -z-[1] text-justify text-sm sm:text-lg gap-5 md:col-span-3 lg:col-span-2">
           <motion.p
             className="mb-3"
             initial="hidden"

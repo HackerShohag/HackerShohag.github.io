@@ -11,16 +11,7 @@ import '@/components/styles/random-facts.css';
 // import required modules
 import { EffectCards } from 'swiper/modules';
 import { itim } from '@/config/fonts';
-
-const facts = [
-  "I am coding since 10th grade!",
-  "I like idle time!",
-  "My friends call me AB!",
-  "I like to explore different fields!",
-  "Python was always my second favourite!",
-  "My journey started with MATLAB!",
-  "My birthname is Shohag!"
-];
+import { facts } from '@/lib/data';
 
 export default function RandomFacts({ className }: { className?: string }) {
   return (
