@@ -28,46 +28,46 @@ export const siteConfig = {
 			hash: "#academic",
 			icon: React.createElement(FaGraduationCap),
 		},
-		{
-			name: "Experience",
-			hash: "#experience",
-			icon: React.createElement(FaBriefcase),
-		},
+		// {
+		// 	name: "Experience",
+		// 	hash: "#experience",
+		// 	icon: React.createElement(FaBriefcase),
+		// },
 		{
 			name: "Skills",
 			hash: "#skills",
 			icon: React.createElement(FaTools),
 		},
-		{
-			name: "Awards",
-			hash: "#awards",
-			icon: React.createElement(FaAward),
-		},
+		// {
+		// 	name: "Awards",
+		// 	hash: "#awards",
+		// 	icon: React.createElement(FaAward),
+		// },
 		{
 			name: "Certifications",
 			hash: "#certifications",
 			icon: React.createElement(FaCertificate),
 		},
-		{
-			name: "Publications",
-			hash: "#publications",
-			icon: React.createElement(FaBook),
-		},
-		{
-			name: "Memberships",
-			hash: "#memberships",
-			icon: React.createElement(FaUsers),
-		},
+		// {
+		// 	name: "Publications",
+		// 	hash: "#publications",
+		// 	icon: React.createElement(FaBook),
+		// },
+		// {
+		// 	name: "Memberships",
+		// 	hash: "#memberships",
+		// 	icon: React.createElement(FaUsers),
+		// },
 		{
 			name: "Projects",
 			hash: "#projects",
 			icon: React.createElement(FaProjectDiagram),
 		},
-		{
-			name: "Blogs",
-			hash: "#blogs",
-			icon: React.createElement(FaBlog),
-		},
+		// {
+		// 	name: "Blogs",
+		// 	hash: "#blogs",
+		// 	icon: React.createElement(FaBlog),
+		// },
 		{
 			name: "Contact",
 			hash: "#contact",

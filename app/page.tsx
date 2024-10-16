@@ -17,14 +17,14 @@ export default function Home() {
       <IntroUpdated />
       <About />
       <Academic />
-      <Experiences />
+      {/* <Experiences /> */}
       <Skills />
-      <Awards />
+      {/* <Awards /> */}
       <Certifications />
-      <Publications />
-      <MembershipsAndAffliations />
+      {/* <Publications /> */}
+      {/* <MembershipsAndAffliations /> */}
       <Projects />
-      <Blogs />
+      {/* <Blogs /> */}
       <Contact />
     </main>
   );
