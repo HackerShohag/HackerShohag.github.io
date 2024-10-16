@@ -4,7 +4,6 @@ import React from "react";
 import Blog from "@/components/blog";
 
 import { useSectionInView } from "@/lib/hooks";
-import { useTheme } from "@/context/theme-context";
 import { blogsData } from "@/lib/data";
 import SectionHeading from "./section-heading";
 

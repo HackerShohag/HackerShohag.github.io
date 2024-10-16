@@ -20,7 +20,7 @@ export default function RandomFacts({ className }: { className?: string }) {
       <Swiper
         title='Random Facts'
         effect={'cards'}
-        initialSlide={7}
+        initialSlide={facts.length}
         grabCursor={true}
         modules={[EffectCards]}
         className="random-facts text-black"
