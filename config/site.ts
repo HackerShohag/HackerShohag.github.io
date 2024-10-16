@@ -8,6 +8,7 @@ export const siteConfig = {
 	name: "Md. Abdullah AL Mamun (Shohag)",
 	keyname: "ABD",
 	logo: logo.src,
+	shortIntro: "Computer Science & Engineering, RUET",
 	shortname: "Personal Portfolio",
 	description: "Md. Abdullah AL Mamun, also known as Abdullah AL Shohag is a full-stack developer based in Bangladesh, specializes in React, Next.js, TypeScript, Tailwind and MongoDB.",
 	url: 'https://shohag.tech',

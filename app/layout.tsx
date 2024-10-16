@@ -1,7 +1,6 @@
 import Header from "@/components/header";
 import { Inter } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
-import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
@@ -9,6 +8,7 @@ import { Toaster } from "react-hot-toast";
 import "./globals.css";
 import Provider from "./provider";
 import { siteConfig } from "@/config/site";
+import FooterSection from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,7 +38,7 @@ export default function RootLayout({
             <ActiveSectionContextProvider>
               <Header />
               {children}
-              <Footer />
+              <FooterSection />
               <Toaster position="top-right" />
               <ThemeSwitch className="hidden lg:flex" />
             </ActiveSectionContextProvider>
