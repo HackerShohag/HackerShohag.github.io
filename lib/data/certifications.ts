@@ -55,12 +55,12 @@ export const certificationsData = [
   },
   {
     src: introProgrammingMATLAB1.src,
-    title: "Introduction to Programming with MATLAB (NKRE5ZT52UYR)",
+    title: "Introduction to Programming with MATLAB",
     link: "https://example.com/intro-programming-matlab-1",
   },
   {
     src: introProgrammingMATLAB2.src,
-    title: "Introduction to Programming with MATLAB (XUXH222JAUAX)",
+    title: "Introduction to Programming with MATLAB",
     link: "https://example.com/intro-programming-matlab-2",
   },
   {

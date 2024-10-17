@@ -21,9 +21,9 @@ export default function IntroUpdated() {
     <section
       ref={ref}
       id="home"
-      className="flex flex-col z-10 justify-center items-center h-[70vh] max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      className="flex flex-col z-10 justify-center items-center h-[70vh] max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem] w-full px-10"
     >
-      <div className="grid grid-cols-[0.3fr,3fr] md:grid-cols-[0.2fr,5fr,2fr]">
+      <div className="grid grid-cols-[0.3fr,3fr] md:grid-cols-[0.2fr,5fr,2fr] w-full justify-between gap-5">
         <div className="col-span-1 flex flex-col gap-2 h-full justify-center sm:justify-between">
           {
             socialLinks.map((socialLink) => (
