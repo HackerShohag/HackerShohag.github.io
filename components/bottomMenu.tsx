@@ -60,7 +60,7 @@ export function ContactMenu() {
 
   return (
     <div className="flex flex-col gap-2">
-      <Image onClick={onOpen} radius="full" shadow="sm" src={siteConfig.logo} alt="Logo" className="h-8 w-8 bg-white" />
+      <Image onClick={onOpen} radius="full" shadow="sm" src={siteConfig.logo} alt="Logo" className="h-8 w-8 bg-white cursor-pointer" />
       <Modal
         isOpen={isOpen}
         placement='bottom'
