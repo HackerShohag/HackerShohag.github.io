@@ -5,10 +5,11 @@ import logo from "@/public/vector_x256.png";
 import React from 'react';
 
 export const siteConfig = {
-	name: "Md. Abdullah AL Mamun (Shohag)",
+	name: "Md. Abdullah AL Mamun",
 	keyname: "ABD",
 	logo: logo.src,
 	shortIntro: "Computer Science & Engineering, RUET",
+	email: "info@shohag.tech",
 	shortname: "Personal Portfolio",
 	description: "Md. Abdullah AL Mamun, also known as Abdullah AL Shohag is a full-stack developer based in Bangladesh, specializes in React, Next.js, TypeScript, Tailwind and MongoDB.",
 	url: 'https://shohag.tech',

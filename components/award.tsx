@@ -16,13 +16,13 @@ export default function Award( { award }: { award: AwardProps }) {
     return (
         <motion.div
             ref={ref}
-            className="grid grid-rows-2 border shadow-md rounded-lg"
+            className="grid border shadow-md rounded-lg grid-rows-[auto,1fr]"
             initial={{ opacity: 0, y: 200 }}
             animate={inView ? { opacity: [0, .25, 1], y: 0 } : {} }
             transition={{ duration: 0.4 }}
             whileHover={{ scale: 1.05 }}
         >
-            <div className="flex mt-5 mb-2 w-full justify-center items-center">
+            <div className="flex p-10 mt-5 mb-2 w-full justify-center items-center">
                 {award.icon}
             </div>
             <p className="mb-5 mx-2 sm:mx-5 text-md sm:text-lg justify-start text-justify">{award.description}</p>

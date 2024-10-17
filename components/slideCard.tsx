@@ -49,6 +49,7 @@ export default function SlideCard({ images }: SlideCardProps) {
                 delay: 3000,
                 disableOnInteraction: false,
             }}
+            autoHeight={true}
         >
             {
                 images.map((image, index) => (
@@ -64,7 +65,7 @@ export default function SlideCard({ images }: SlideCardProps) {
                         >
                             <Image
                                 alt={image.title}
-                                className="object-cover p-5"
+                                className="object-cover p-5 mb-10"
                                 // height={200}
                                 src={image.src}
                                 // width={200}

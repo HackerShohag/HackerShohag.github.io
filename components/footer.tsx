@@ -12,8 +12,8 @@ function FooterSection() {
     return (
         <div className='bg-gray-600 dark:bg-gray-900 pb-14 sm:pb-4'>
             <div className="flex flex-col md:flex-row text-center items-center w-full h-max justify-center p-10 gap-10 md:gap-20">
-                <div className="flex flex-col mb-5 md:mb-0">
-                    <h2 className="text-2xl font-bold text-gray-300 dark:text-gray-400">{siteConfig.name}</h2>
+                <div className="flex flex-col text-left mb-5 md:mb-0">
+                    <h2 className="text-xl font-bold text-gray-300 dark:text-gray-400 hover:animate-rolling-text">{siteConfig.name}</h2>
                     <p className="text-sm text-gray-300 dark:text-gray-400">{siteConfig.shortIntro}</p>
                 </div>
                 <div className="flex flex-col items-center justify-center">
