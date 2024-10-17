@@ -40,12 +40,19 @@ export default function ExperienceItem({
                 <div className="flex flex-col max-w-5xl gap-32 my-5 justify-center">
                     <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-10 sm:gap-36 justify-center">
                         <motion.div
-                            className="h-full content-center"
+                            className="h-full flex justify-center items-center"
                             initial={{ scale: 1 }}
                             whileHover={{ scale: 1.1 }}
                             transition={{ duration: 0.4, ease: "linear" }}
                         >
-                            <Image shadow="md" src={image} alt={title} width={450} height={250} />
+                            <Image
+                                shadow="md"
+                                src={image}
+                                alt={title}
+                                width={450}
+                                height={250}
+                                className="object-cover object-center"
+                            />
                         </motion.div>
                         <div>
                             <h1 className="text-lg sm:text-2xl font-bold text-gray-800 dark:text-gray-200">

@@ -11,3 +11,4 @@ export * from '@/lib/data/publications';
 export * from '@/lib/data/memberships'
 export * from '@/lib/data/blogs';
 export * from '@/lib/data/projects';
+export * from '@/lib/data/contacts';

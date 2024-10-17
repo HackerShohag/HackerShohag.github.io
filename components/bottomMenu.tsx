@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { LuLayoutGrid } from "react-icons/lu";
 import { siteConfig } from "@/config/site";
-import { contactsInfo } from "@/lib/data/contacts";
+import { contactsInfo } from "@/lib/data";
 
 
 export default function BottomMenu() {

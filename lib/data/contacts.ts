@@ -1,14 +1,10 @@
 import React from "react";
-import { socialLinks } from "@/lib/data/intro";
-import { FaEnvelope, FaFacebook, FaInstagram } from "react-icons/fa";
+import { socialLinks } from "@/lib/data";
+import { FaEnvelope, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 export const contactsInfo = [
-    {
-        name: "Facebook",
-        url: "https://www.facebook.com/HackerShohag",
-        icon: React.createElement(FaFacebook),
-    },
+    ...socialLinks,
     {
         name: "Instagram",
         url: "https://www.instagram.com/hackershohag",
@@ -19,10 +15,9 @@ export const contactsInfo = [
         url: "https://x.com/AbdullahLsM",
         icon: React.createElement(FaXTwitter),
     },
-    ...socialLinks,
     {
         name: "Email",
-        url: "mailto:info@shohag.tech",
+        url: "mailto:md.abdullahalmamun.shohag.abd@gmail.com",
         icon: React.createElement(FaEnvelope),
     },
 ]

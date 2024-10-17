@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookF, FaGithub, FaLinkedinIn, FaMedium } from "react-icons/fa6";
+import { FaFacebook, FaGithub, FaLinkedinIn, FaMedium } from "react-icons/fa6";
 
 export const welcomeMessage = {
     message: "Hello! I'm",
@@ -14,27 +14,22 @@ export interface TypeWriterString_T {
 export const typeWriterStrings: readonly TypeWriterString_T[] = [
     {
         prefix: "good at",
-        items: ["ReactJS", "NextJS", "C++", "Python"],
+        items: [ "Python", "C++", "NextJS" ],
     },
     {
         prefix: "interested in",
-        items: ["Quantum Mechanics", "Quantum Computing", "String Theory"],
+        items: [ "Quantum Computing", "String Theory", "Astrophysics" ],
     },
     {
         prefix: "learning",
-        items: ["Machine Learning", "Deep Learning", "Quantum Machine Learning"],
+        items: ["Machine Learning", "Deep Learning", "Quantum Computing" ],
     }
 ] as const;
 
 export const socialLinks = [
-    // {
-    //     name: "Email",
-    //     url: "mailto:md.abdullahalmamun.shohag.abd@gmail.com",
-    //     icon: React.createElement(FaEnvelope),
-    // },
     {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/hackershohag/",
+        url: "https://www.linkedin.com/in/hackershohag",
         icon: React.createElement(FaLinkedinIn),
     },
     {
@@ -50,6 +45,6 @@ export const socialLinks = [
     {
         name: "Facebook",
         url: "https://www.facebook.com/HackerShohag",
-        icon: React.createElement(FaFacebookF),
-    }
+        icon: React.createElement(FaFacebook),
+    },
 ] as const;

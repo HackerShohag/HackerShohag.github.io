@@ -1,8 +1,8 @@
 
-import keyboarImg from "@/public/keyboard.png";
-import shottibookingsImg from "@/public/shottibookings.png";
-import ravendownloaderImg from "@/public/ravendownloader.png";
-import suggestbotbnImg from "@/public/suggestbotbn.png";
+import keyboarImg from "@/public/projects/keyboard.png";
+import shottibookingsImg from "@/public/projects/shottibookings.png";
+import ravendownloaderImg from "@/public/projects/ravendownloader.png";
+import suggestbotbnImg from "@/public/projects/suggestbotbn.png";
 
 export const membershipsAndAffliationsData = [
     {

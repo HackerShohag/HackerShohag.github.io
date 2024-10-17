@@ -6,12 +6,13 @@ import React from 'react';
 
 export const siteConfig = {
 	name: "Md. Abdullah AL Mamun",
-	keyname: "ABD",
+	nickName: "ABD",
+	preferredName: "Abdullah AL Shohag",
+	birthName: "Shohag",
 	logo: logo.src,
 	shortIntro: "Computer Science & Engineering, RUET",
 	email: "info@shohag.tech",
-	shortname: "Personal Portfolio",
-	description: "Md. Abdullah AL Mamun, also known as Abdullah AL Shohag is a full-stack developer based in Bangladesh, specializes in React, Next.js, TypeScript, Tailwind and MongoDB.",
+	description: `Md. Abdullah AL Mamun, also known as Abdullah AL Shohag, is an AI specialist from Bangladesh, focused on machine learning and deep learning in public health and medical imaging. Additionally, he is a proficient full-stack developer, skilled in React, Next.js, TypeScript, and MongoDB.`,
 	url: 'https://shohag.tech',
 	googleVerification: "LfVzFPEr0IALyIIOvDAGXZB-jOcNdRrmHd3QdH5hYLE",
 	navbarItems: [

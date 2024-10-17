@@ -17,7 +17,7 @@ export default function Home() {
       <IntroUpdated />
       <About />
       <Academic />
-      {/* <Experiences /> */}
+      <Experiences />
       <Skills />
       {/* <Awards /> */}
       <Certifications />

@@ -70,7 +70,7 @@ export default function Header() {
             <ContactMenu />
           </div>
           <div className={`absolute left-1/2 transform -translate-x-1/2 ${clsx(sofia.className)} text-2xl font-black text-gray-500 dark:text-gray-500 items-center`}>
-            {siteConfig.keyname}
+            {siteConfig.nickName}
           </div>
           <div className="flex items-center space-x-2">
             <ThemeSwitch className="flex lg:hidden" iconHeightClass="font-medium h-4 w-4" isFixed={false} />

@@ -14,7 +14,7 @@ import { montserrat } from "@/config/fonts";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: siteConfig.name + " | " + siteConfig.shortname,
+  title: siteConfig.name + "(" + siteConfig.birthName + ")" + " | " + siteConfig.shortIntro,
   description: siteConfig.description,
 };
 
