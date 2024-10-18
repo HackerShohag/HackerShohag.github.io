@@ -14,7 +14,7 @@ export const siteConfig = {
 	email: "info@shohag.tech",
 	description: `Md. Abdullah AL Mamun, also known as Abdullah AL Shohag, is an AI specialist from Bangladesh, focused on machine learning and deep learning in public health and medical imaging. Additionally, he is a proficient full-stack developer, skilled in React, Next.js, TypeScript, and MongoDB.`,
 	url: 'https://shohag.tech',
-	googleVerification: "LfVzFPEr0IALyIIOvDAGXZB-jOcNdRrmHd3QdH5hYLE",
+	googleVerification: "bMhd9syuEin1ysp71dq2kPwPgCSqDVpSh2fmGtJcSYw",
 	navbarItems: [
 		{
 			name: "Home",
