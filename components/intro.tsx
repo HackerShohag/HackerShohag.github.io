@@ -13,6 +13,7 @@ import { itim, signika, sofia } from "@/config/fonts";
 import GitHubCalendar from 'react-github-calendar';
 
 import '@/components/styles/fancy-radius.css';
+import { Tooltip } from "@nextui-org/react";
 
 export default function IntroUpdated() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -94,26 +95,33 @@ export default function IntroUpdated() {
           hideMonthLabels={false}
           hideTotalCount={false}
           theme={{
-        light: ['hsl(0, 0%, 92%)', 'firebrick'],
-        dark: ['#333', 'rgb(214, 16, 174)'],
+            light: ['hsl(0, 0%, 92%)', 'firebrick'],
+            dark: ['#333', 'rgb(214, 16, 174)'],
           }}
-        //   renderBlock={(block, activity) => {
-        // console.log(block, activity);
+          errorMessage='Error – Fetching GitHub contribution data for "Md. Abdullah Al Mamun" failed.
+          Please make sure the username is correct and the user has contributions in the repository.'
+          renderBlock={(block, activity) => {
+            console.log(block, activity);
 
-        // return (
-        //   <rect
-        //     key={block.props.date}
-        //     x={block.props.x}
-        //     y={block.props.y}
-        //     width={block.props.width}
-        //     height={block.props.height}
-        //     fill={block.props.fill}
-        //     data-count={block.props.count}
-        //     data-date={block.props.date}
-        //     title={`Date: ${block.props.date}, Count: ${block.props.count}`}
-        //   />
-        // );
-        //   }}
+            return (
+              <Tooltip
+                content={<div className="text-center">{activity.count} contributions on {activity.date}</div>}
+                key={activity.date}
+              >
+                <circle
+                  key={activity.date}
+                  cx={Number(block.props.x) + Number(block.props.width) / 2}
+                  cy={Number(block.props.y) + Number(block.props.height) / 2}
+                  r={Number(block.props.width) / 2}
+                  fill={block.props.fill}               
+                  data-count={block.props.values}
+                  data-date={activity.date}
+                  data-level={activity.level}
+                  data-tip={activity.count}
+                />
+              </Tooltip>
+            );
+          }}
         />
       </div>
     </section>
