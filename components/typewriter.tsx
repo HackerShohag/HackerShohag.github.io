@@ -13,9 +13,6 @@ export default function TypeWriterEffect({ texts }: { texts: TypeWriterString_T[
         texts.forEach(({ prefix, items }) => {
           typewriter
             .typeString(prefix)
-            .callFunction(() => {
-              console.log(prefix);
-            });
           typewriter.typeString(" ");
           items.forEach((item, index) => {
             typewriter

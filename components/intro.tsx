@@ -6,10 +6,11 @@ import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import PdfViewer from "./pdfViewer";
-import TypeWriterEffect from "./typewriter";
+import PdfViewer from "@/components/pdfViewer";
+import TypeWriterEffect from "@/components/typewriter";
 import { aboutData, socialLinks, TypeWriterString_T, typeWriterStrings, welcomeMessage } from "@/lib/data";
 import { itim, signika, sofia } from "@/config/fonts";
+import GitHubCalendar from 'react-github-calendar';
 
 import '@/components/styles/fancy-radius.css';
 
@@ -21,9 +22,9 @@ export default function IntroUpdated() {
     <section
       ref={ref}
       id="home"
-      className="flex flex-col z-10 justify-center items-center h-[70vh] max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem] w-full px-2 sm:px-0"
+      className="flex flex-col z-10 justify-center items-center h-[70vh] text-center sm:mb-0 scroll-mt-[100rem] w-full px-2 sm:px-0 gap-16 sm:gap-32"
     >
-      <div className="grid grid-cols-[0.3fr,3fr] md:grid-cols-[0.2fr,5fr,2fr] w-full justify-between gap-5 md:gap-0">
+      <div className="grid grid-cols-[0.3fr,3fr] md:grid-cols-[0.2fr,5fr,2fr] max-w-[50rem] justify-between gap-5 md:gap-0">
         <div className="col-span-1 flex flex-col gap-2 h-full justify-center sm:justify-between">
           {
             socialLinks.map((socialLink) => (
@@ -81,6 +82,39 @@ export default function IntroUpdated() {
             className="w-52 h-52 animatedBox border-4 border-white border-opacity-40 shadow-2xl"
           />
         </div>
+      </div>
+      <div className={`${sofia.className} flex w-full justify-center`}>
+        <GitHubCalendar
+          username="HackerShohag"
+          colorScheme="light"
+          blockSize={12}
+          blockMargin={2}
+          fontSize={16}
+          hideColorLegend={false}
+          hideMonthLabels={false}
+          hideTotalCount={false}
+          theme={{
+        light: ['hsl(0, 0%, 92%)', 'firebrick'],
+        dark: ['#333', 'rgb(214, 16, 174)'],
+          }}
+        //   renderBlock={(block, activity) => {
+        // console.log(block, activity);
+
+        // return (
+        //   <rect
+        //     key={block.props.date}
+        //     x={block.props.x}
+        //     y={block.props.y}
+        //     width={block.props.width}
+        //     height={block.props.height}
+        //     fill={block.props.fill}
+        //     data-count={block.props.count}
+        //     data-date={block.props.date}
+        //     title={`Date: ${block.props.date}, Count: ${block.props.count}`}
+        //   />
+        // );
+        //   }}
+        />
       </div>
     </section>
   );
