@@ -22,7 +22,7 @@ export default function IntroUpdated() {
     <section
       ref={ref}
       id="home"
-      className="flex flex-col z-10 justify-center items-center h-[70vh] text-center sm:mb-0 scroll-mt-[100rem] w-full px-2 sm:px-0 gap-16 sm:gap-32"
+      className="flex flex-col my-10 z-10 justify-center items-center h-[70vh] text-center sm:mb-0 scroll-mt-[100rem] w-full px-2 sm:px-0 gap-16 sm:gap-32"
     >
       <div className="grid grid-cols-[0.3fr,3fr] md:grid-cols-[0.2fr,5fr,2fr] max-w-[50rem] justify-between gap-5 md:gap-0">
         <div className="col-span-1 flex flex-col gap-2 h-full justify-center sm:justify-between">
