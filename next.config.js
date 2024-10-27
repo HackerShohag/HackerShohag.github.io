@@ -9,7 +9,10 @@ const nextConfig = {
     ],
   },
   experimental: {
-    serverActions: true,
+    serverActions: {
+      // basePath: "/api",
+      // serverActionsDir: "./server-actions
+    },
   },
 };
 

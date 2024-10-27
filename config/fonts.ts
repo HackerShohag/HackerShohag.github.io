@@ -1,4 +1,4 @@
-import { Fira_Code as FontMono, Inter as FontSans, Dancing_Script, Alex_Brush, Sofia, Signika, Itim, Montserrat } from "next/font/google";
+import { Fira_Code as FontMono, Inter as FontSans, Dancing_Script, Alex_Brush, Sofia, Signika, Itim, Montserrat, Ubuntu_Mono } from "next/font/google";
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -42,5 +42,11 @@ export const itim = Itim({
 export const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
+  weight: "400"
+});
+
+export const monospace = Ubuntu_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
   weight: "400"
 });

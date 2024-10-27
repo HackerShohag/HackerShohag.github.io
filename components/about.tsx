@@ -41,7 +41,7 @@ export default function About() {
             </motion.div>
           </div>
         </div>
-        <div className="flex flex-col -z-[1] text-justify text-sm sm:text-lg gap-5 md:col-span-3 lg:col-span-2">
+        <div className="flex flex-col text-justify text-sm sm:text-lg gap-5 md:col-span-3 lg:col-span-2">
           <motion.p
             className="mb-3"
             initial="hidden"

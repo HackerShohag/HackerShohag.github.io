@@ -13,8 +13,7 @@ import '@/components/styles/slide-card.css';
 
 // import required modules
 import { EffectCoverflow, Pagination, Autoplay, Navigation } from 'swiper/modules';
-import { Image } from '@nextui-org/image';
-import { Card, CardFooter } from '@nextui-org/react';
+import { Card, CardFooter, Image } from '@nextui-org/react';
 import Link from 'next/link';
 
 interface certificateImage {

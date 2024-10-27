@@ -1,20 +1,20 @@
 import React from 'react';
-import { Link } from "@nextui-org/link";
-import { Divider } from "@nextui-org/react";
+import { Image, Link } from "@nextui-org/react";
 import { siteConfig } from '@/config/site';
 
 // icons from react-icons
-import { FaGithub, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
-import { FaFacebookF, FaXTwitter } from "react-icons/fa6";
-import { aboutData, socialLinks } from '@/lib/data';
+import { socialLinks } from '@/lib/data';
 
 function FooterSection() {
     return (
         <div className='bg-gray-600 dark:bg-gray-900 pb-14 sm:pb-4'>
             <div className="flex flex-col md:flex-row text-center items-center w-full h-max justify-center p-10 gap-10 md:gap-20">
-                <div className="flex flex-col text-left mb-5 md:mb-0">
-                    <h2 className="text-xl font-bold text-gray-300 dark:text-gray-400 hover:animate-rolling-text">{siteConfig.name}</h2>
-                    <p className="text-sm text-gray-300 dark:text-gray-400">{siteConfig.shortIntro}</p>
+                <div className="flex gap-5 justify-center items-center">
+                    <Image src={siteConfig.logo} alt={siteConfig.name} width={40} height={40} className="rounded-full bg-gray-300" />
+                    <div className="flex flex-col text-left mb-5 md:mb-0">
+                        <h2 className="text-xl font-bold text-gray-300 dark:text-gray-400 hover:animate-rolling-text">{siteConfig.name}</h2>
+                        <p className="text-sm text-gray-300 dark:text-gray-400">{siteConfig.shortIntro}</p>
+                    </div>
                 </div>
                 <div className="flex flex-col items-center justify-center">
                     <div className="flex justify-center gap-3 mb-5">
