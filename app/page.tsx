@@ -12,12 +12,28 @@ import Projects from "@/components/projects";
 import Publications from "@/components/publications";
 import Skills from "@/components/skills";
 
+const code = `class Life:
+    def __init__(self, name):
+        self.name = name
+        self.energy = 100
+
+    def code(self):
+        if self.energy >= 30:
+            self.energy -= 30
+            print(f"{self.name} is coding. Energy: {self.energy}")
+        else:
+            print(f"{self.name} is too tired to code. Needs to eat or sleep.")
+
+    def sleep(self):
+        self.energy = min(self.energy + 40, 100)
+        print(f"{self.name} is sleeping. Energy: {self.energy}")`;
+
 export default function Home() {
   return (
     <main className="flex flex-col items-center px-4 gap-12">
       <IntroUpdated />
-      <CodeSnippetCard />
       <About />
+      <CodeSnippetCard filename="human_life.py" code={code} startLineNumber={379} />
       <Academic />
       <Experiences />
       <Skills />

@@ -1,32 +1,31 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
 import { FaUserGraduate } from "react-icons/fa6";
 import { LiaSchoolSolid } from "react-icons/lia";
 import { LuGraduationCap } from "react-icons/lu";
 
 export const academicData = [
     {
-        title: "Bachelor of Science in Engineering",
+        title: "Bachelor of Engineering - BE, Computer Science and Engineering",
         location: "Rajshahi University of Engineering & Technology",
         description:
-            "I studied Computer Science and Engineering. I learned about algorithms, data structures, operating systems, and computer networks. I also developed a strong foundation in mathematics.",
-        icon: React.createElement(FaUserGraduate), // Using a different icon for university
-        date: "2022 - 2026",
+            "Pursuing a Bachelor's degree in Computer Science and Engineering, focusing on algorithms, data structures, operating systems, and computer networks.",
+        icon: React.createElement(FaUserGraduate),
+        date: "December 2021 - July 2026",
     },
     {
-        title: "Higher Secondary Certificate",
+        title: "Higher Secondary School, Science",
         location: "Police Lines School and College, Rangpur",
         description:
-            "I completed my Higher Secondary Certificate (HSC) with a focus on science.",
-        icon: React.createElement(LuGraduationCap), // Using a different icon for high school
-        date: "2019 - 2020",
+            "Completed Higher Secondary Certificate with a focus on Science subjects.",
+        icon: React.createElement(LuGraduationCap),
+        date: "June 2018 - January 2021",
     },
     {
-        title: "Secondary School Certificate",
+        title: "Secondary School Certificate, Science",
         location: "Gangachara Adarsha High School, Rangpur",
         description:
-            "I completed my Secondary School Certificate (SSC) with a focus on science.",
-        icon: React.createElement(LiaSchoolSolid), // Keeping the same icon for secondary school
-        date: "2017 - 2018",
+            "Completed Secondary School Certificate with a focus on Science subjects.",
+        icon: React.createElement(LiaSchoolSolid),
+        date: "2012 - 2018",
     },
 ] as const;

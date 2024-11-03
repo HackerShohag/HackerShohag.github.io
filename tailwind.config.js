@@ -18,8 +18,7 @@ module.exports = {
     },
   },
   plugins: [
-    nextui(),
-    require('tailwind-scrollbar-hide')
+    nextui()
   ],
   darkMode: "class",
 };

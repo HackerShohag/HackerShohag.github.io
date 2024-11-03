@@ -38,7 +38,7 @@ export default function ExperienceItem({
         >
             <section className="sm:pr-8 relative mx-2 sm:mx-5 justify-center">
                 <div className="flex flex-col max-w-5xl gap-32 my-5 justify-center">
-                    <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-10 sm:gap-36 justify-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-10 px-10 sm:gap-36 justify-center items-center">
                         <motion.div
                             className="h-full flex justify-center items-center"
                             initial={{ scale: 1 }}
@@ -46,12 +46,15 @@ export default function ExperienceItem({
                             transition={{ duration: 0.4, ease: "linear" }}
                         >
                             <Image
-                                shadow="md"
+                                shadow="sm"
                                 src={image}
                                 alt={title}
                                 width={450}
                                 height={250}
                                 className="object-cover object-center"
+                                title={title}
+                                loading="lazy"
+                                aria-errormessage="Image failed to load"
                             />
                         </motion.div>
                         <div>
@@ -67,7 +70,7 @@ export default function ExperienceItem({
                             <p className="text-sm sm:text-md text-gray-600 dark:text-gray-300 text-justify">
                                 {description}
                             </p>
-                            <ul className="text-sm sm:text-md text-gray-600 dark:text-gray-300 mt-10">
+                            <ul className="text-sm sm:text-md text-gray-600 dark:text-gray-300 mt-4">
                                 {
                                     keypoints.map((keypoint, index) => (
                                         <li key={index} className="list-disc ml-4">
