@@ -35,32 +35,26 @@ export default function CodeSnippetCard({ filename, code, startLineNumber = 1 }:
     }, [code]);
 
     return (
-        <Card className={`${monospace.className} my-10 max-w-fit bg-slate-100 dark:bg-gray-800 relative`}>
+        <Card className={`${monospace.className} my-10 max-w-fit w-full bg-slate-100 dark:bg-gray-800 relative`}>
             <div className="flex bg-gray-200 dark:bg-gray-900 p-3 pb-0">
                 <h4 className="bg-slate-100 dark:bg-gray-800 text-black dark:text-white p-2 rounded-t-lg">
                     {filename}
                 </h4>
             </div>
-            <Card className="flex flex-row rounded-none bg-slate-100 dark:bg-gray-800 border-none">
-                <div className="flex">
-                    <pre className="text-gray-800 dark:text-gray-300 px-4 py-2">
-                        {code.split('\n').map((_, index) => (
-                            <div key={index}>{startLineNumber + index}</div>
-                        ))}
-                    </pre>
-                </div>
-                <div className="flex">
+            <Card className="flex flex-row rounded-none bg-slate-100 dark:bg-gray-800 border-none text-sm sm:text-md">
                     <SyntaxHighlighter
                         className="bg-gray-800"
                         language="python"
                         style={atomOneDark}
                         customStyle={{ backgroundColor: 'transparent' }}
+                        showLineNumbers
                         startingLineNumber={startLineNumber}
-                        lineNumberStyle={{ color: '#999', backgroundColor: '#2d2d2d' }}
+                        wrapLines={true}
+                        wrapLongLines={true}
+                        lineNumberStyle={{ color: '#DDD', backgroundColor: 'transparent' }}
                     >
                         {code}
                     </SyntaxHighlighter>
-                </div>
             </Card>
         </Card>
     );
