@@ -1,3 +1,5 @@
+'use client';
+
 import { TypeWriterString_T } from '@/lib/data';
 import Typewriter from 'typewriter-effect';
 

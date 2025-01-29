@@ -36,7 +36,7 @@ const PdfViewer = () => {
                                     <Link
                                         className="flex items-center gap-2"
                                         href="/resume.pdf"
-                                        download
+                                        download = "Shohag_RUET_CSE_Resume.pdf"
                                         target="_blank"
                                     >
                                         Download{" "}
