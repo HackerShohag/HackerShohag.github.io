@@ -2,7 +2,7 @@
 
 import { FC, useState } from 'react';
 import { Chrono } from 'react-chrono';
-import { Switch, Button } from '@nextui-org/react';
+import { Switch } from '@nextui-org/react';
 
 interface TimelineItem {
   title: string;

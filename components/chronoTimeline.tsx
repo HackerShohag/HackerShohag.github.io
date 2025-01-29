@@ -1,3 +1,5 @@
+'use client';
+
 import CustomTimeline from '@/components/CustomTimeline';
 
 const timelineItems = [

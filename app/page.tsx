@@ -3,7 +3,7 @@ import Academic from "@/components/academic";
 import Awards from "@/components/awards";
 import Blogs from "@/components/blogs";
 import Certifications from "@/components/certifications";
-import ChronoTimeline from "@/components/chronoTimeline";
+// import ChronoTimeline from "@/components/chronoTimeline";
 import CodeSnippetCard from "@/components/CodeSnippetCard";
 import Contact from "@/components/contact";
 import Experiences from "@/components/experiences";
@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center px-4 gap-12">
       <IntroUpdated />
-      <ChronoTimeline />
+      {/* <ChronoTimeline /> */}
       <About />
       <CodeSnippetCard filename="human_life.py" code={code} startLineNumber={379} />
       <Academic />
