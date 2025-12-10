@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -13,7 +14,7 @@ import '@/components/styles/slide-card.css';
 
 // import required modules
 import { EffectCoverflow, Pagination, Autoplay, Navigation } from 'swiper/modules';
-import { Card, CardFooter, Image } from '@nextui-org/react';
+import { Card, CardFooter } from '@nextui-org/react';
 import Link from 'next/link';
 
 interface certificateImage {
@@ -53,7 +54,6 @@ export default function SlideCard({ images }: SlideCardProps) {
             {
                 images.map((image, index) => (
                     <SwiperSlide title={image.title} key={index} className='overflow-hidden rounded-2xl shadow-xl'>
-                        {/* <Image src={image.src} alt="slide" radius='none' className='h-full' /> */}
                         <Card
                             isFooterBlurred
                             radius="lg"
@@ -65,9 +65,11 @@ export default function SlideCard({ images }: SlideCardProps) {
                             <Image
                                 alt={image.title}
                                 className="object-cover p-5 mb-10"
-                                // height={200}
                                 src={image.src}
-                                // width={200}
+                                width={600}
+                                height={400}
+                                quality={85}
+                                loading="lazy"
                             />
                             <CardFooter className="justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
                                 <p className="text-md sm:text-lg font-bold text-black/80">{image.title}</p>

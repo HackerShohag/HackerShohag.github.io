@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { BsArrowRight } from "react-icons/bs";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
@@ -76,11 +77,14 @@ export default function IntroUpdated() {
           </motion.div>
         </div>
         <div className="md:col-span-1 md:order-2 flex justify-center items-center">
-          <img
-            width={250}
+          <Image
+            width={208}
+            height={208}
             src={aboutData.image}
-            alt="Shohag portrait"
-            className="w-52 h-52 animatedBox border-4 border-white border-opacity-40 shadow-2xl"
+            alt="Md. Abdullah AL Mamun (Shohag) portrait"
+            className="w-52 h-52 animatedBox border-4 border-white border-opacity-40 shadow-2xl object-cover"
+            priority
+            quality={90}
           />
         </div>
       </div>
@@ -101,8 +105,6 @@ export default function IntroUpdated() {
           errorMessage='Error – Fetching GitHub contribution data for "Md. Abdullah Al Mamun" failed.
           Please make sure the username is correct and the user has contributions in the repository.'
           renderBlock={(block, activity) => {
-            console.log(block, activity);
-
             return (
               <Tooltip
                 content={<div className="text-center">{activity.count} contributions on {activity.date}</div>}

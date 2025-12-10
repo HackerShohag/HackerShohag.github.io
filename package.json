@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "optimize-images": "./scripts/optimize-images.sh",
+    "analyze": "ANALYZE=true npm run build",
+    "lighthouse": "lighthouse https://shohag.tech --view --output html --output-path ./lighthouse-report.html"
   },
   "dependencies": {
     "@nextui-org/react": "^2.4.6",
