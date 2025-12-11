@@ -35,12 +35,15 @@ export default function Skills() {
       <RevealOnScroll direction="up">
         <SectionHeading>My skills</SectionHeading>
       </RevealOnScroll>
-      <StaggerChildren className="flex flex-wrap justify-center gap-2 text-md sm:text-lg text-gray-800" staggerDelay={0.05}>
+      <ul className="flex flex-wrap justify-center gap-2 text-md sm:text-lg text-gray-800">
         {skillsData.map((skill, index) => (
           <motion.li
             className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80 cursor-pointer"
             key={index}
-            variants={modernAnimations.staggerItem}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.05 }}
             whileHover={{
               y: -5,
               scale: 1.1,
@@ -51,7 +54,7 @@ export default function Skills() {
             {skill}
           </motion.li>
         ))}
-      </StaggerChildren>
+      </ul>
     </section>
   );
 
