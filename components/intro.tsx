@@ -12,6 +12,9 @@ import TypeWriterEffect from "@/components/typewriter";
 import { aboutData, socialLinks, TypeWriterString_T, typeWriterStrings, welcomeMessage } from "@/lib/data";
 import { itim, signika, sofia } from "@/config/fonts";
 import GitHubCalendar from 'react-github-calendar';
+import { MagneticLink } from "@/components/animations/MagneticButton";
+import AnimatedText, { GradientText } from "@/components/animations/AnimatedText";
+import { FloatingOrbs } from "@/components/animations/BackgroundEffects";
 
 import '@/components/styles/fancy-radius.css';
 import { Tooltip } from "@nextui-org/react";
@@ -24,20 +27,22 @@ export default function IntroUpdated() {
     <section
       ref={ref}
       id="home"
-      className="flex flex-col my-10 z-10 justify-center items-center h-[70vh] text-center sm:mb-0 scroll-mt-[100rem] w-full px-2 sm:px-0 gap-16 sm:gap-32"
+      className="flex flex-col my-10 z-10 justify-center items-center h-[70vh] text-center sm:mb-0 scroll-mt-[100rem] w-full px-2 sm:px-0 gap-16 sm:gap-32 relative"
     >
+      <FloatingOrbs count={3} />
       <div className="grid grid-cols-[0.3fr,3fr] md:grid-cols-[0.2fr,5fr,2fr] max-w-[50rem] justify-between gap-5 md:gap-0">
         <div className="col-span-1 flex flex-col gap-2 h-full justify-center sm:justify-between">
           {
             socialLinks.map((socialLink) => (
-              <Link
+              <MagneticLink
                 key={socialLink.name}
-                className="text-xl bg-white/30 dark:bg-white/10 p-4 text-gray-900 hover:text-blue-900 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer md:borderBlack dark:text-white/60 dark:hover:text-blue-400"
+                className="text-xl bg-white/30 dark:bg-white/10 p-4 text-gray-900 hover:text-blue-900 flex items-center gap-2 rounded-full cursor-pointer md:borderBlack dark:text-white/60 dark:hover:text-blue-400"
                 href={socialLink.url}
                 target="_blank"
+                strength={0.3}
               >
                 {socialLink.icon}
-              </Link>
+              </MagneticLink>
             ))
           }
         </div>
@@ -47,8 +52,13 @@ export default function IntroUpdated() {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <p className={`${sofia.className} text-2xl md:text-3xl font-medium`}>{welcomeMessage.message}</p>
-            <h1 className={`${signika.className} text-3xl sm:text-4xl md:text-5xl font-bold text-amber-950 dark:text-amber-100`}>{welcomeMessage.name}</h1>
+            <AnimatedText 
+              text={welcomeMessage.message}
+              className={`${sofia.className} text-2xl md:text-3xl font-medium`}
+            />
+            <GradientText className={`${signika.className} text-3xl sm:text-4xl md:text-5xl font-bold`}>
+              {welcomeMessage.name}
+            </GradientText>
           </motion.div>
           <div className={`${itim.className} px-4 mb-5 text-xl flex`}>
             <TypeWriterEffect texts={typeWriterStrings as TypeWriterString_T[]} />
